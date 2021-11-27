@@ -14,6 +14,7 @@ class AddFieldsAndOrganizeUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
+            $table->string('first_name', 50)->change();
             $table->after('first_name', function ($table) {
                 $table->string('last_name',50);
                 $table->string('user_name',20)->unique();
