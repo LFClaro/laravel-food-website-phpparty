@@ -1,6 +1,9 @@
-@section('content2')
-<body>
-<main>
+@extends('layouts.main')
+
+@section(('header'))
+    @parent
+@endsection
+@section('content')
     <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -11,7 +14,7 @@
             <div class="carousel-item active">
                 <!--                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#FFC055"/></svg>-->
                 <div class="item" style="background-image: url(../Images/Photos/IMG_8044-1920x892.jpg);">
-                    <img src="Images/Photos/IMG_8044-1920x892.jpg"/>
+                    <img src="public/img/Photos/IMG_8044-1920x892.jpg"/>
                 </div>
                 <div class="container">
                     <div class="carousel-caption text-start">
@@ -24,7 +27,7 @@
             <div class="carousel-item">
                 <!--                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#FFC055"/></svg>-->
                 <div class="item" style="background-image: url(../Images/Photos/IMG_7782-1919x538.jpg);">
-                    <img src="Images/Photos/IMG_7782-1919x538.jpg"/>
+                    <img src="public/img/Photos/IMG_7782-1919x538.jpg"/>
                 </div>
                 <div class="container">
                     <div class="carousel-caption">
@@ -37,7 +40,7 @@
             <div class="carousel-item">
                 <!--                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#FFC055"/></svg>-->
                 <div class="item" style="background-image: url(../Images/Photos/IMG_8358-1920x892.jpg);">
-                    <img src="Images/Photos/IMG_8358-1920x892.jpg"/>
+                    <img src="public/img/Photos/IMG_8358-1920x892.jpg"/>
                 </div>
                 <div class="container">
                     <div class="carousel-caption text-end">
@@ -70,7 +73,7 @@
             <div class="col-lg-4">
                 <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
                     <rect width="100%" height="100%" fill="#FFC055"/>
-                    <img src="Images/SVG/undraw_cooking_teal.svg" width="140" height="140" alt"Two people enjoying food together"/>
+                    <img src="public/img/SVG/undraw_cooking_teal.svg" width="140" height="140" alt"Two people enjoying food together"/>
                 </svg>
 
                 <h2>Recipes</h2>
@@ -80,7 +83,7 @@
             <div class="col-lg-4">
                 <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
                     <rect width="100%" height="100%" fill="#FFC055"/>
-                    <img src="Images/SVG/undraw_Eating_together_teal.svg" width="140" height="140" alt"Two people enjoying food together"/>
+                    <img src="public/img/SVG/undraw_Eating_together_teal.svg" width="140" height="140" alt"Two people enjoying food together"/>
                 </svg>
 
                 <h2>Restaurants</h2>
@@ -90,7 +93,7 @@
             <div class="col-lg-4">
                 <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
                     <rect width="100%" height="100%" fill="#FFC055"/>
-                    <img src="Images/SVG/undraw_online_groceries_teal.svg" width="140" height="140" alt"Two people enjoying food together"/>
+                    <img src="public/img/SVG/undraw_online_groceries_teal.svg" width="140" height="140" alt"Two people enjoying food together"/>
                 </svg>
 
                 <h2>Your Menus</h2>
@@ -155,5 +158,7 @@
     </div><!-- /.container -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.2/js/bootstrap.min.js"></script>
-
-</main>
+@endsection
+@section('footer')
+    @parent
+@endsection

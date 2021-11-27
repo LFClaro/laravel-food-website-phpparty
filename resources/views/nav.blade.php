@@ -1,3 +1,4 @@
+@extends('layouts.main')
 @section('nav')
 <div id="navbarSupportedContent" class="collapse navbar-collapse">
     <ul class="navbar-nav ml-auto">
@@ -9,3 +10,4 @@
         <li class="nav-item"><input type="search" id="src" name="src"><a href="../pages/search.php"><img src="../Images/search_icon.png" width="22" height="23"></a></li>
     </ul>
 </div>
+@endsection
