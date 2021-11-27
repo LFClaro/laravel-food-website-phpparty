@@ -3,6 +3,12 @@
 <head>
     <title>@yield('title')</title>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+    <link href="{{ asset('css/carousel.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/main.css') }}" rel="stylesheet"/>
     <script>
         $(function () {
             $(window).on('scroll', function () {
@@ -19,12 +25,12 @@
 @section('header')
     <header class="header">
         <nav class="navbar navbar-expand-lg fixed-top py-3">
-            <div class="container"><img src="../Images/Logo_transparent.png" alt="PHP Party" width="100" height="50">
+            <div class="container"><img src="{{asset('/img/Logo_transparent.png')}}" alt="PHP Party" width="100" height="50">
                 <a href="index.php" class="navbar-brand text-uppercase font-weight-bold">Recipes</a>
                 <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right">
                     <i class="fa fa-bars"></i></button>
             </div>
-            @yield('nav')
+            @include('inc.nav')
         </nav>
     </header>
     @show

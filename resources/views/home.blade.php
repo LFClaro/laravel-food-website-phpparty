@@ -13,8 +13,8 @@
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <!--                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#FFC055"/></svg>-->
-                <div class="item" style="background-image: url(../Images/Photos/IMG_8044-1920x892.jpg);">
-                    <img src="public/img/Photos/IMG_8044-1920x892.jpg"/>
+                <div class="item" style="background-image: url(../img/Photos/IMG_8044-1920x892.jpg);">
+                    <img src="{{asset('/img/Photos/IMG_8044-1920x892.jpg')}}"/>
                 </div>
                 <div class="container">
                     <div class="carousel-caption text-start">
@@ -26,8 +26,8 @@
             </div>
             <div class="carousel-item">
                 <!--                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#FFC055"/></svg>-->
-                <div class="item" style="background-image: url(../Images/Photos/IMG_7782-1919x538.jpg);">
-                    <img src="public/img/Photos/IMG_7782-1919x538.jpg"/>
+                <div class="item" style="background-image: url(../img/Photos/IMG_7782-1919x538.jpg);">
+                    <img src="{{asset('/img/Photos/IMG_7782-1919x538.jpg')}}"/>
                 </div>
                 <div class="container">
                     <div class="carousel-caption">
@@ -39,8 +39,8 @@
             </div>
             <div class="carousel-item">
                 <!--                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#FFC055"/></svg>-->
-                <div class="item" style="background-image: url(../Images/Photos/IMG_8358-1920x892.jpg);">
-                    <img src="public/img/Photos/IMG_8358-1920x892.jpg"/>
+                <div class="item" style="background-image: url(../img/Photos/IMG_8358-1920x892.jpg);">
+                    <img src="{{asset('/img/Photos/IMG_8358-1920x892.jpg')}}"/>
                 </div>
                 <div class="container">
                     <div class="carousel-caption text-end">
@@ -73,7 +73,7 @@
             <div class="col-lg-4">
                 <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
                     <rect width="100%" height="100%" fill="#FFC055"/>
-                    <img src="public/img/SVG/undraw_cooking_teal.svg" width="140" height="140" alt"Two people enjoying food together"/>
+                    <img src="{{asset('/img/SVG/undraw_cooking_teal.svg')}}" width="140" height="140" alt="Two people enjoying food together"/>
                 </svg>
 
                 <h2>Recipes</h2>
@@ -83,7 +83,7 @@
             <div class="col-lg-4">
                 <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
                     <rect width="100%" height="100%" fill="#FFC055"/>
-                    <img src="public/img/SVG/undraw_Eating_together_teal.svg" width="140" height="140" alt"Two people enjoying food together"/>
+                    <img src="{{asset('/img/SVG/undraw_Eating_together_teal.svg')}}" width="140" height="140" alt="Two people enjoying food together"/>
                 </svg>
 
                 <h2>Restaurants</h2>
@@ -93,7 +93,7 @@
             <div class="col-lg-4">
                 <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
                     <rect width="100%" height="100%" fill="#FFC055"/>
-                    <img src="public/img/SVG/undraw_online_groceries_teal.svg" width="140" height="140" alt"Two people enjoying food together"/>
+                    <img src="{{asset('/img/SVG/undraw_online_groceries_teal.svg')}}" width="140" height="140" alt"Two people enjoying food together"/>
                 </svg>
 
                 <h2>Your Menus</h2>
@@ -115,7 +115,7 @@
             <div class="col-md-5">
                 <!--                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>-->
                 <div class ="featurette-image img-fluid mx-auto">
-                    <img width="500" height="500" src="Images/SVG/undraw_special_event_orange.svg" alt="" />
+                    <img width="500" height="500" src="{{asset('/img/SVG/undraw_special_event_orange.svg')}}" alt="" />
                 </div>
 
             </div>

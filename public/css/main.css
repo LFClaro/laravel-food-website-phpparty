@@ -1,0 +1,174 @@
+/*
+*
+* ==========================================
+* CUSTOM UTIL CLASSES
+* ==========================================
+*
+*/
+.navbar {
+    transition: all 0.4s;
+}
+.navbar .nav-link {
+    color: #fff;
+}
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar .navbar-brand {
+    color: #fff;
+}
+
+/* Change navbar styling on scroll */
+.navbar.active {
+    background: #fff;
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.active .nav-link {
+    color: #555;
+}
+
+.navbar.active .nav-link:hover,
+.navbar.active .nav-link:focus {
+    color: #555;
+    text-decoration: none;
+}
+
+.navbar.active .navbar-brand {
+    color: #555;
+}
+
+/* Change navbar styling on small viewports */
+@media (max-width: 991.98px) {
+    .navbar {
+        background: #fff;
+    }
+    .navbar .navbar-brand, .navbar .nav-link {
+        color: #555;
+    }
+}
+
+/* Change in colors */
+.btn-lg, .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #4ca1af !important;
+    border-color: #4ca1af !important;
+}
+
+.btn-secondary, .btn-secondary:hover, .btn-secondary:active, .btn-secondary:visited {
+    background-color: #FFC055 !important;
+    border-color: #FFC055 !important;
+}
+
+body .text-muted {
+    color: rgba(255,255,255,.25);
+}
+
+body .text-highlighted {
+    color: #FFC055;
+}
+
+
+/* Img alignment in circles */
+.col-lg-4 svg {
+    position: absolute;
+    z-index: -1;
+}
+
+
+/*
+*
+* ==========================================
+* FOR DEMO PURPOSES
+* ==========================================
+*
+*/
+.text-small {
+    font-size: 0.9rem !important;
+}
+
+body {
+    min-height: 110vh;
+    background-color: #4ca1af;
+    background-image: linear-gradient(135deg, #4ca1af 0%, #c4e0e5 100%);
+}
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+}
+
+/*
+*
+* ==========================================
+* FOR REGISTRATION FORM
+* ==========================================
+*
+*/
+.formContainer > div {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    background-color: #FFC055;
+}
+
+.formContainer {
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 2px;
+    margin: 10px;
+}
+
+#divH {
+    grid-column: 1 / 2;
+    text-align: center;
+}
+
+#divF {
+    grid-column: 1 / 2;
+}
+
+#divL {
+    grid-column: 1 / 2;
+}
+
+#divE {
+    grid-column: 1 / 2;
+}
+
+#divUn {
+    grid-column: 1 / 2;
+}
+
+#divP {
+    grid-column: 1 / 2;
+}
+
+#divCP {
+    grid-column: 1 / 2;
+}
+
+#divN {
+    grid-column: 1 / 2;
+}
+
+#divB {
+    grid-column: 1 / 2;
+    text-align: center;
+}
+
+span {
+    color: red;
+}
