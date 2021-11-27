@@ -1,3 +1,4 @@
+@section('content2')
 <body>
 <main>
     <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">

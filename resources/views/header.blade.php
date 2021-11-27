@@ -1,3 +1,4 @@
+@section('content1')
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,7 +35,7 @@
             <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right">
                 <i class="fa fa-bars"></i></button>
         </div>
-        <?php require_once "nav.php" ?>
+        @yield('nav')
     </nav>
 </header>
 
