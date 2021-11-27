@@ -15,4 +15,9 @@ class Restaurant extends Model
 //  TODO: created_at, updated_at
     protected $fillable = ['name', 'address', 'phone', 'menu_options', 'email',
                             'website', 'comments', 'rating', 'country_id'];
+
+    public function country()
+    {
+        return $this->belongsTo('App\Models\Country','country_id');
+    }
 }

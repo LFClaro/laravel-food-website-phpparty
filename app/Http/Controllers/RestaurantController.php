@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Country;
 use App\Models\Restaurant;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,8 @@ class RestaurantController extends Controller
      */
     public function index()
     {
-        return view();
+        $restaurants = Restaurant::with('country')->get();
+        return view('restaurants.index', compact('restaurants'));
     }
 
     /**
@@ -24,7 +26,8 @@ class RestaurantController extends Controller
      */
     public function create()
     {
-        //
+        $countries = Country::all();
+        return view('restaurants.create', compact('countries'));
     }
 
     /**
@@ -35,7 +38,8 @@ class RestaurantController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Restaurant::create($request->all());
+        return redirect('restaurants');
     }
 
     /**
@@ -46,7 +50,7 @@ class RestaurantController extends Controller
      */
     public function show(Restaurant $restaurant)
     {
-        //
+        return view('restaurants.show', ['restaurants' => $restaurant]);
     }
 
     /**
@@ -57,7 +61,8 @@ class RestaurantController extends Controller
      */
     public function edit(Restaurant $restaurant)
     {
-        //
+        $countries = Country::all();
+        return view('restaurants.edit', ['restaurants' => $restaurant], compact('countries'));
     }
 
     /**
@@ -69,7 +74,8 @@ class RestaurantController extends Controller
      */
     public function update(Request $request, Restaurant $restaurant)
     {
-        //
+        $restaurant->update($request->all());
+        return redirect('restaurants');
     }
 
     /**
@@ -80,6 +86,7 @@ class RestaurantController extends Controller
      */
     public function destroy(Restaurant $restaurant)
     {
-        //
+        $restaurant->delete();
+        return redirect('restaurants');
     }
 }

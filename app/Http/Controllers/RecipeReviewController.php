@@ -14,7 +14,8 @@ class RecipeReviewController extends Controller
      */
     public function index()
     {
-        //
+        $recipereview = RecipeReview::all();
+        return view('recipereview.index', compact('recipereview'));
     }
 
     /**
