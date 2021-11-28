@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\RestaurantController;
+use App\Http\Controllers\RecipeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,6 +23,7 @@ Route::get('/home', function () {
 });
 
 Route::resource('/restaurants', RestaurantController::class);
+Route::resource('/recipes', RecipeController::class);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
