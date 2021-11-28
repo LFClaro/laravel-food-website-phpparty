@@ -15,10 +15,7 @@
             <tr>
                 <th>NAME</th>
                 <th>Description</th>
-                <th>Ingredients</th>
-                <th>Steps</th>
                 <th>Website</th>
-                <th>Comments</th>
                 <th>Calories</th>
                 <th>Servings</th>
                 <th>Rating</th>
@@ -31,10 +28,7 @@
                 <tr onclick="window.location='{{ url('recipes', $r->id) }}';">
                     <td><a href="{{ url('recipes', $r->id) }}" class="text-light">{{ $r->name }}</a></td>
                     <td><a href="{{ url('recipes', $r->id) }}" class="text-light">{{ $r->description }}</a></td>
-                    <td><a href="{{ url('recipes', $r->id) }}" class="text-light">{{ $r->ingredients }}</a></td>
-                    <td><a href="{{ url('recipes', $r->id) }}" class="text-light">{{ $r->steps }}</a></td>
                     <td><a href="{{ $r->website }}" class="text-light">{{ $r->website }}</a></td>
-                    <td><a href="{{ url('recipes', $r->id) }}" class="text-light">{{ $r->comments }}</a></td>
                     <td><a href="{{ url('recipes', $r->id) }}" class="text-light">{{ $r->calories }}</a></td>
                     <td><a href="{{ url('recipes', $r->id) }}" class="text-light">{{ $r->servings }}</a></td>
                     <td><a href="{{ url('recipes', $r->id) }}" class="text-light">{{ $r->rating }}</a></td>
@@ -57,7 +51,7 @@
             </tbody>
         </table>
         <br />
-        <p><a href="{{ url("recipes/create") }}" class="btn btn-success me-2 float-right">Add Restaurant</a></p>
+        <p><a href="{{ url("recipes/create") }}" class="btn btn-success me-2 float-right">Add Recipe</a></p>
     </div>
 @endsection
 @section('footer')
