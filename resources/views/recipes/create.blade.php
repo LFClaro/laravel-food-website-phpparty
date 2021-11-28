@@ -1,67 +1,75 @@
 @extends('layouts.main')
 
 @section( 'title')
-    Add Restaurant
+    Add Recipe
 @endsection
 
 @section('content')
     <div class="container align-items-center justify-content-center">
-        <form action="{{ url('restaurants') }}" method="post">
+        <h1>Add Recipe </h1>
+        <form action="{{ url('recipes') }}" method="post">
             @csrf
+            @method('PUT')
             <div class="form-group">
                 <label for="make">Name: </label>
-                <input type="text" class="form-control" name="name" id="name" value=""
+                <input type="text" class="form-control" name="name" id="name" value="{{ $recipes->name }}"
                        placeholder="Enter Name">
             </div>
             <div class="form-group">
-                <label for="model">Address: </label>
-                <input type="text" class="form-control" name="address" id="address"
-                       value="" placeholder="Enter Address">
+                <label for="model">Description: </label>
+                <textarea type="text" class="form-control" name="description" id="description"
+                          placeholder="Enter description">{{ $recipes->description }}</textarea>
             </div>
             <div class="form-group">
-                <label for="">Phone: </label>
-                <input type="text" class="form-control" name="phone" id="phone" value=""
-                       placeholder="Enter Phone">
+                <label for="year">Ingredients: </label>
+                <textarea type="text" class="form-control" name="ingredients" id="ingredients"
+                          placeholder="Enter ingredients">{{ $recipes->ingredients }}</textarea>
             </div>
             <div class="form-group">
-                <label for="email">E-Mail: </label>
-                <input type="text" class="form-control" name="email" id="email" value=""
-                       placeholder="Enter E-Mail">
+                <label for="year">Steps: </label>
+                <textarea type="text" class="form-control" name="steps" id="steps"
+                          placeholder="Enter steps">{{ $recipes->steps }}</textarea>
             </div>
             <div class="form-group">
-                <label for="menu_options">Menu Options: </label>
-                <input type="text" class="form-control" name="menu_options" id="menu_options" value=""
-                       placeholder="Enter Menu Options">
+                <label for="year">Website: </label>
+                <input type="text" class="form-control" name="website" id="website" value="{{ $recipes->website }}"
+                       placeholder="Enter website">{{ $recipes->website }}
             </div>
             <div class="form-group">
-                <label for="website">Website: </label>
-                <input type="text" class="form-control" name="website" id="website" value=""
-                       placeholder="Enter Website">
+                <label for="year">Comments: </label>
+                <textarea type="text" class="form-control" name="comments" id="comments"
+                          placeholder="Enter comments">{{ $recipes->comments }}</textarea>
             </div>
             <div class="form-group">
-                <label for="comments">Comments: </label>
-                <input type="text" class="form-control" name="comments" id="comments" value=""
-                       placeholder="Enter Comments">
+                <label for="make">Calories: </label>
+                <input type="number" class="form-control" name="calories" id="calories" value="{{ $recipes->calories }}"
+                       placeholder="Enter calories" min="0" max="32767">
             </div>
             <div class="form-group">
-                <label for="rating">Rating: </label>
-                <input type="number" min="0" max="5" step="1" class="form-control" name="rating" id="rating" value="0">
+                <label for="make">Serving: </label>
+                <input type="number" class="form-control" name="serving" id="serving" value="{{ $recipes->serving }}"
+                       placeholder="Enter serving" min="0" max="255">
+            </div>
+            <div class="form-group">
+                <label for="make">Rating: </label>
+                <input type="number" class="form-control" name="rating" id="rating" value="{{ $recipes->rating }}"
+                       placeholder="Enter rating" min="0" max="5">
             </div>
             <div class="form-group">
                 <label for="country_id">Country: </label>
                 <select class="form-control" name="country_id" id="country_id" value="">
-                    <option value="">Select Country</option>
                     @foreach($countries as $country)
+                        // TODO: logic for selected country
                         <option value="{{$country->id}}">{{$country->name}}</option>
                     @endforeach
                 </select>
             </div>
-            <button type="submit" name="editRestaurant"
+            <button type="submit" name="editRecipe"
                     class="btn btn-success float-right" id="btn-submit">
-                Add Restaurant
+                Update Recipe
             </button>
             <br />
-            <a href="{{ url('cars') }}" id="btn_back" class="btn btn-danger float-left">Back</a>
+            <a href="{{ url('recipes') }}" id="btn_back" class="btn btn-danger float-left">Back</a>
         </form>
     </div>
 @endsection
