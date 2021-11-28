@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Country;
 use App\Models\Recipe;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,7 @@ class RecipeController extends Controller
      */
     public function index()
     {
-        $recipes = Recipe::all();
+        $recipes = Recipe::with('country')->get();
         return view('recipes.index', compact('recipes'));
     }
 
@@ -25,7 +26,8 @@ class RecipeController extends Controller
      */
     public function create()
     {
-        //
+        $countries = Country::all();
+        return view('recipes.create', compact('countries'));
     }
 
     /**
@@ -36,7 +38,8 @@ class RecipeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Recipe::create($request->all());
+        return redirect('recipes');
     }
 
     /**
@@ -47,7 +50,7 @@ class RecipeController extends Controller
      */
     public function show(Recipe $recipe)
     {
-        //
+        return view('recipes.show', ['recipes' => $recipe]);
     }
 
     /**
@@ -58,7 +61,8 @@ class RecipeController extends Controller
      */
     public function edit(Recipe $recipe)
     {
-        //
+        $countries = Country::all();
+        return view('recipes.edit', ['recipes' => $recipe], compact('countries'));
     }
 
     /**
@@ -70,7 +74,8 @@ class RecipeController extends Controller
      */
     public function update(Request $request, Recipe $recipe)
     {
-        //
+        $recipe->update($request->all());
+        return redirect('recipes');
     }
 
     /**
@@ -81,6 +86,7 @@ class RecipeController extends Controller
      */
     public function destroy(Recipe $recipe)
     {
-        //
+        $recipe->delete();
+        return redirect('recipes');
     }
 }
