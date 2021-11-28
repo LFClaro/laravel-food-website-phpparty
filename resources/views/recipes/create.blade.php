@@ -9,7 +9,6 @@
         <h1>Add Recipe </h1>
         <form action="{{ url('recipes') }}" method="post">
             @csrf
-            @method('PUT')
             <div class="form-group">
                 <label for="make">Name: </label>
                 <input type="text" class="form-control" name="name" id="name"
