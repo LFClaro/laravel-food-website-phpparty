@@ -12,47 +12,47 @@
             @method('PUT')
             <div class="form-group">
                 <label for="make">Name: </label>
-                <input type="text" class="form-control" name="name" id="name" value="{{ $recipes->name }}"
+                <input type="text" class="form-control" name="name" id="name"
                        placeholder="Enter Name">
             </div>
             <div class="form-group">
                 <label for="model">Description: </label>
                 <textarea type="text" class="form-control" name="description" id="description"
-                          placeholder="Enter description">{{ $recipes->description }}</textarea>
+                          placeholder="Enter description"></textarea>
             </div>
             <div class="form-group">
                 <label for="year">Ingredients: </label>
                 <textarea type="text" class="form-control" name="ingredients" id="ingredients"
-                          placeholder="Enter ingredients">{{ $recipes->ingredients }}</textarea>
+                          placeholder="Enter ingredients"></textarea>
             </div>
             <div class="form-group">
                 <label for="year">Steps: </label>
                 <textarea type="text" class="form-control" name="steps" id="steps"
-                          placeholder="Enter steps">{{ $recipes->steps }}</textarea>
+                          placeholder="Enter steps"></textarea>
             </div>
             <div class="form-group">
                 <label for="year">Website: </label>
-                <input type="text" class="form-control" name="website" id="website" value="{{ $recipes->website }}"
-                       placeholder="Enter website">{{ $recipes->website }}
+                <input type="text" class="form-control" name="website" id="website"
+                       placeholder="Enter website">
             </div>
             <div class="form-group">
                 <label for="year">Comments: </label>
                 <textarea type="text" class="form-control" name="comments" id="comments"
-                          placeholder="Enter comments">{{ $recipes->comments }}</textarea>
+                          placeholder="Enter comments"></textarea>
             </div>
             <div class="form-group">
                 <label for="make">Calories: </label>
-                <input type="number" class="form-control" name="calories" id="calories" value="{{ $recipes->calories }}"
+                <input type="number" class="form-control" name="calories" id="calories"
                        placeholder="Enter calories" min="0" max="32767">
             </div>
             <div class="form-group">
                 <label for="make">Serving: </label>
-                <input type="number" class="form-control" name="serving" id="serving" value="{{ $recipes->serving }}"
+                <input type="number" class="form-control" name="serving" id="serving"
                        placeholder="Enter serving" min="0" max="255">
             </div>
             <div class="form-group">
                 <label for="make">Rating: </label>
-                <input type="number" class="form-control" name="rating" id="rating" value="{{ $recipes->rating }}"
+                <input type="number" class="form-control" name="rating" id="rating"
                        placeholder="Enter rating" min="0" max="5">
             </div>
             <div class="form-group">
@@ -64,9 +64,9 @@
                     @endforeach
                 </select>
             </div>
-            <button type="submit" name="editRecipe"
+            <button type="submit" name="addRecipe"
                     class="btn btn-success float-right" id="btn-submit">
-                Update Recipe
+                Add Recipe
             </button>
             <br />
             <a href="{{ url('recipes') }}" id="btn_back" class="btn btn-danger float-left">Back</a>
