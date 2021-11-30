@@ -20,7 +20,7 @@
                     <div class="carousel-caption text-start">
                         <h1>Around the world in 80 meals.</h1>
                         <p>Explore cuisines from other countries through many exciting recipes.</p>
-                        <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+                        <p><a class="btn btn-lg btn-primary text-light" href="/recipes">Learn more</a></p>
                     </div>
                 </div>
             </div>
@@ -33,7 +33,7 @@
                     <div class="carousel-caption">
                         <h1>Hungry for new ideas?</h1>
                         <p>We've hand-picked these international restaurants for you.</p>
-                        <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+                        <p><a class="btn btn-lg btn-primary text-light" href="/restaurants">Browse options</a></p>
                     </div>
                 </div>
             </div>
@@ -46,7 +46,7 @@
                     <div class="carousel-caption text-end">
                         <h1>Travel without leaving your kitchen.</h1>
                         <p>Amazing recipes from all over the world in the palm of your hand.</p>
-                        <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+                        <p><a class="btn btn-lg btn-primary text-light" href="#">Sign up today</a></p>
                     </div>
                 </div>
             </div>
@@ -78,7 +78,7 @@
 
                 <h2>Recipes</h2>
                 <p>Here you can have access to recipes from all over the world. We have a database with numerous recipes from more than 80 countries for your taste.</p>
-                <p><a class="btn btn-secondary" href="#">View Recipes &raquo;</a></p>
+                <p><a class="btn btn-secondary" href="/recipes">View Recipes &raquo;</a></p>
             </div><!-- /.col-lg-4 -->
             <div class="col-lg-4">
                 <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
@@ -88,12 +88,12 @@
 
                 <h2>Restaurants</h2>
                 <p>Looking to find your new favourite restaurant? You've come to the right place! We have a database with different cuisines from around the globe.</p>
-                <p><a class="btn btn-secondary" href="#">View Restaurants &raquo;</a></p>
+                <p><a class="btn btn-secondary" href="/restaurants">View Restaurants &raquo;</a></p>
             </div><!-- /.col-lg-4 -->
             <div class="col-lg-4">
                 <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
                     <rect width="100%" height="100%" fill="#FFC055"/>
-                    <img src="{{asset('/img/SVG/undraw_online_groceries_teal.svg')}}" width="140" height="140" alt"Two people enjoying food together"/>
+                    <img src="{{asset('/img/SVG/undraw_online_groceries_teal.svg')}}" width="140" height="140" alt="Two people enjoying food together"/>
                 </svg>
 
                 <h2>Your Menus</h2>
@@ -115,7 +115,7 @@
             <div class="col-md-5">
                 <!--                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>-->
                 <div class ="featurette-image img-fluid mx-auto">
-                    <img width="500" height="500" src="{{asset('/img/SVG/undraw_special_event_orange.svg')}}" alt="" />
+                    <img width="500" height="500" src="{{asset('/img/SVG/undraw_special_event_orange.svg')}}" alt="A special event" />
                 </div>
 
             </div>
@@ -131,7 +131,7 @@
             <div class="col-md-5 order-md-1">
                 <!--                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>-->
                 <div class ="featurette-image img-fluid mx-auto">
-                    <img width="450" height="450" src="Images/SVG/undraw_tourist_map_re_orange.svg" alt="A map of an unmarked neighbourhood" />
+                    <img width="450" height="450" src="{{asset('/img/SVG/undraw_tourist_map_re_orange.svg')}}" alt="A map of an unmarked neighbourhood" />
                 </div>
             </div>
         </div>
@@ -146,7 +146,7 @@
             <div class="col-md-5">
                 <!--                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>-->
                 <div class ="featurette-image img-fluid mx-auto">
-                    <img width="450" height="450" src="Images/SVG/undraw_diet_orange.svg" alt="Person choosing form different diets" />
+                    <img width="450" height="450" src="{{asset('/img/SVG/undraw_diet_orange.svg')}}" alt="Person choosing form different diets" />
                 </div>
             </div>
         </div>

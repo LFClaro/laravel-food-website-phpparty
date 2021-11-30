@@ -10,9 +10,10 @@
 @section('content')
     <div class="container align-items-center justify-content-center">
         <h1 class="text-center">Restaurant List</h1>
-        <table class="table table-striped table-dark table-hover">
+        <p class="text-center"><a href="{{ url("restaurants/create") }}" class="btn btn-success text-light">Add Restaurant</a></p>
+        <table class="table table-striped table-light text-dark table-hover">
             <thead>
-            <tr>
+            <tr class="text-center text-black">
                 <th>NAME</th>
                 <th>ADDRESS</th>
                 <th>PHONE</th>
@@ -28,26 +29,26 @@
             <tbody>
             @foreach($restaurants as $r)
                 <tr onclick="window.location='{{ url('restaurants', $r->id) }}';">
-                    <td><a href="{{ url('restaurants', $r->id) }}" class="text-light">{{ $r->name }}</a></td>
-                    <td><a href="{{ url('restaurants', $r->id) }}" class="text-light">{{ $r->address }}</a></td>
-                    <td><a href="{{ url('restaurants', $r->id) }}" class="text-light">{{ $r->phone }}</a></td>
-                    <td><a href="{{ url('restaurants', $r->id) }}" class="text-light">{{ $r->menu_options }}</a></td>
-                    <td><a href="{{ url('restaurants', $r->id) }}" class="text-light">{{ $r->email }}</a></td>
-                    <td><a href="{{ $r->website }}" class="text-light">{{ $r->website }}</a></td>
-                    <td><a href="{{ url('restaurants', $r->id) }}" class="text-light">{{ $r->comments }}</a></td>
-                    <td><a href="{{ url('restaurants', $r->id) }}" class="text-light">{{ $r->rating }}</a></td>
-                    <td><a href="{{ url('restaurants', $r->id) }}" class="text-light">{{ $r->country->name }}</a></td>
+                    <td><a href="{{ url('restaurants', $r->id) }}" class="text-dark">{{ $r->name }}</a></td>
+                    <td>{{ $r->address }}</td>
+                    <td><a href="tel:+1{{ $r->phone }}" class="text-dark">{{ $r->phone }}</a></td>
+                    <td>{{ $r->menu_options }}</td>
+                    <td><a href="mailto:{{ $r->email }}" class="text-dark">{{ $r->email }}</a></td>
+                    <td><a href="{{ $r->website }}" class="text-dark">{{ $r->website }}</a></td>
+                    <td>{{ $r->comments }}</td>
+                    <td>{{ $r->rating }}</td>
+                    <td>{{ $r->country->name }}</td>
                     <td>
                         <form method="get" action="{{ url('restaurants/' . $r->id . '/edit')}}">
                             @csrf
-                            <input type="submit" class="btn btn-primary me-2" value="Update" />
+                            <input type="submit" class="btn btn-primary text-light" value="Update" />
                         </form>
                     </td>
                     <td>
                         <form method="post" action="{{ url('restaurants/' . $r->id)}}">
                             @csrf
                             @method('DELETE')
-                            <input type="submit" class="btn btn-danger me-2" value="Delete" />
+                            <input type="submit" class="btn btn-danger text-light" value="Delete" />
                         </form>
                     </td>
                 </tr>
@@ -55,7 +56,6 @@
             </tbody>
         </table>
         <br />
-        <p><a href="{{ url("restaurants/create") }}" class="btn btn-success me-2 float-right">Add Restaurant</a></p>
     </div>
 @endsection
 @section('footer')

@@ -64,7 +64,7 @@ class RestaurantController extends Controller
     public function edit(Restaurant $restaurant)
     {
         $countries = Country::all();
-        return view('restaurants.edit', ['restaurants' => $restaurant], compact('countries'));
+        return view('restaurants.edit', ['restaurant' => $restaurant], compact('countries'));
     }
 
     /**

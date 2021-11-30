@@ -56,12 +56,18 @@
                     @endforeach
                 </select>
             </div>
-            <button type="submit" name="editRestaurant"
-                    class="btn btn-success float-right" id="btn-submit">
-                Add Restaurant
-            </button>
             <br />
-            <a href="{{ url('cars') }}" id="btn_back" class="btn btn-danger float-left">Back</a>
+            <div class="row">
+                <div class="col">
+                    <a href="{{ url('restaurants') }}" id="btn_back" class="btn btn-danger text-light float-start">Back</a>
+                </div>
+                <div class="col">
+                    <button type="submit" name="editRestaurant"
+                            class="btn btn-success text-light float-end" id="btn-submit">
+                        Add Restaurant
+                    </button>
+                </div>
+            </div>
         </form>
     </div>
 @endsection

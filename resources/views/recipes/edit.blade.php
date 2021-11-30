@@ -63,13 +63,17 @@
                         <option value="{{$country->id}}">{{$country->name}}</option>
                     @endforeach
                 </select>
+            </div><div class="row">
+                <div class="col">
+                    <a href="{{ url('recipes') }}" id="btn_back" class="btn btn-danger text-light float-start">Back</a>
+                </div>
+                <div class="col">
+                    <button type="submit" name="editRestaurant"
+                            class="btn btn-success text-light float-end" id="btn-submit">
+                        Update Recipes
+                    </button>
+                </div>
             </div>
-            <button type="submit" name="editRecipe"
-                    class="btn btn-success float-right" id="btn-submit">
-                Update Recipe
-            </button>
-            <br />
-            <a href="{{ url('recipes') }}" id="btn_back" class="btn btn-danger float-left">Back</a>
         </form>
     </div>
 @endsection
