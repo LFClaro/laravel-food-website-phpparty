@@ -24,7 +24,11 @@ Route::get('/home', function () {
 
 Route::resource('/restaurants', RestaurantController::class);
 Route::resource('/recipes', RecipeController::class);
+<<<<<<< HEAD
 Route::resource('/recipereview', \App\Http\Controllers\RecipeReviewController::class);
+=======
+Route::resource('/review',\App\Http\Controllers\RestaurantReviewController::class);
+>>>>>>> 0e75df6d70d80119fe365c519dbde0f71cd09f84
 
 Route::get('/dashboard', function () {
     return view('dashboard');
