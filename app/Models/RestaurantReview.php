@@ -5,20 +5,20 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+
 class RestaurantReview extends Model
 {
-    use HasFactory;
-//  protected $table = 'students';
-//  protected $primaryKey = 'id';
-    public $timestamps = true;
-//  TODO - add => id?, comment, restuarant_id, user_id, created_at, updated_at
-    protected $fillable = ['comment', 'restuarant_id', 'user_id'];
 
-    public function restaurant(){
-        return $this->belongsTo('APP\Models\Restaurant','restaurant_id');
-    }
+    use HasFactory;
+    public $timestamps = true;
+    protected $fillable = ['comment','restaurant_id','user_id'];
+
+public function restaurant(){
+    return $this->belongsTo('App\Models\Restaurant','restaurant_id');
+}
 
     public function user(){
-        return $this->belongsTo('APP\Models\User','user_id');
+        return $this->belongsTo('App\Models\User','user_id');
     }
+
 }

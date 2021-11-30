@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use App\Models\RestaurantReview;
 use Illuminate\Http\Request;
 
+/**
+ * Class RestaurantReviewController
+ * @package App\Http\Controllers
+ */
 class RestaurantReviewController extends Controller
 {
     /**
@@ -14,8 +18,9 @@ class RestaurantReviewController extends Controller
      */
     public function index()
     {
-        $restaurantReview = RestaurantReview::all();
-        return view('restaurantReview.index', compact('restaurantReview'));
+        $restaurantReviews = RestaurantReview::all();
+
+        return view('restaurant-review.index', compact('restaurantReviews'));
     }
 
     /**
@@ -25,62 +30,79 @@ class RestaurantReviewController extends Controller
      */
     public function create()
     {
-        //
+        $restaurantReview = new RestaurantReview();
+        return view('restaurant-review.create', compact('restaurantReview'));
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        //
+        request()->validate(RestaurantReview::$rules);
+
+        $restaurantReview = RestaurantReview::create($request->all());
+
+        return redirect()->route('restaurant-reviews.index')
+            ->with('success', 'RestaurantReview created successfully.');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\RestaurantReview  $restaurantReview
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function show(RestaurantReview $restaurantReview)
+    public function show($id)
     {
-        //
+        $restaurantReview = RestaurantReview::find($id);
+
+        return view('restaurant-review.show', compact('restaurantReview'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\RestaurantReview  $restaurantReview
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(RestaurantReview $restaurantReview)
+    public function edit($id)
     {
-        //
+        $restaurantReview = RestaurantReview::find($id);
+
+        return view('restaurant-review.edit', compact('restaurantReview'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\RestaurantReview  $restaurantReview
+     * @param  \Illuminate\Http\Request $request
+     * @param  RestaurantReview $restaurantReview
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, RestaurantReview $restaurantReview)
     {
-        //
+        request()->validate(RestaurantReview::$rules);
+
+        $restaurantReview->update($request->all());
+
+        return redirect()->route('restaurant-reviews.index')
+            ->with('success', 'RestaurantReview updated successfully');
     }
 
     /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\RestaurantReview  $restaurantReview
-     * @return \Illuminate\Http\Response
+     * @param int $id
+     * @return \Illuminate\Http\RedirectResponse
+     * @throws \Exception
      */
-    public function destroy(RestaurantReview $restaurantReview)
+    public function destroy($id)
     {
-        //
+        $restaurantReview = RestaurantReview::find($id)->delete();
+
+        return redirect()->route('restaurant-reviews.index')
+            ->with('success', 'RestaurantReview deleted successfully');
     }
 }
