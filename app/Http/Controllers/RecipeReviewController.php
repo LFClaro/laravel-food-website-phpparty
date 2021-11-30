@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Recipe;
 use App\Models\RecipeReview;
 use Illuminate\Http\Request;
 
