@@ -24,6 +24,7 @@ Route::get('/home', function () {
 
 Route::resource('/restaurants', RestaurantController::class);
 Route::resource('/recipes', RecipeController::class);
+Route::resource('/restaurantReviews',RestaurantReview::class);
 
 Route::get('/dashboard', function () {
     return view('dashboard');

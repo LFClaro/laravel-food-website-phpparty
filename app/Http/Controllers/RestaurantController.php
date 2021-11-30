@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Country;
 use App\Models\Restaurant;
+use App\Models\RestaurantReview;
 use Illuminate\Http\Request;
 
 class RestaurantController extends Controller
@@ -16,6 +17,7 @@ class RestaurantController extends Controller
     public function index()
     {
         $restaurants = Restaurant::with('country')->get();
+        $reviews = RestaurantReview::with('user')->get();
         return view('restaurants.index', compact('restaurants'));
     }
 

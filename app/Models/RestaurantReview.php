@@ -13,4 +13,12 @@ class RestaurantReview extends Model
     public $timestamps = true;
 //  TODO - add => id?, comment, restuarant_id, user_id, created_at, updated_at
     protected $fillable = ['comment', 'restuarant_id', 'user_id'];
+
+    public function restaurant(){
+        return $this->belongsTo('APP\Models\Restaurant','restaurant_id');
+    }
+
+    public function user(){
+        return $this->belongsTo('APP\Models\User','user_id');
+    }
 }
