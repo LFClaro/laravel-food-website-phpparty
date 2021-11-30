@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\RestaurantController;
+use App\Http\Controllers\RestaurantReviewController;
+use App\Http\Controllers\RecipeReviewController;
 use App\Http\Controllers\RecipeController;
 use Illuminate\Support\Facades\Route;
 
@@ -24,8 +26,8 @@ Route::get('/home', function () {
 
 Route::resource('/restaurants', RestaurantController::class);
 Route::resource('/recipes', RecipeController::class);
-Route::resource('/recipereview', \App\Http\Controllers\RecipeReviewController::class);
-Route::resource('/review',\App\Http\Controllers\RestaurantReviewController::class);
+Route::resource('/recipereview', RecipeReviewController::class);
+Route::resource('/review',RestaurantReviewController::class);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
