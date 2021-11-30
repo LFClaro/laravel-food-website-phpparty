@@ -7,7 +7,7 @@
 @section('content')
     <div class="container align-items-center justify-content-center">
         <h1>Add Review </h1>
-        <form action="{{ url('recipereveiw') }}" method="post">
+        <form action="{{ url('recipe_reviews') }}" method="post">
             @csrf
             <div class="form-group">
                 <label for="userid">User Id: </label>
@@ -28,7 +28,7 @@
                     class="btn btn-success float-right" id="btn-submit" value="Comment" />
 
             <br />
-            <a href="{{ url('recipesreviw') }}" id="btn_back" class="btn btn-danger float-left">Back</a>
+            <a href="{{ url('recipe_reviews') }}" id="btn_back" class="btn btn-danger float-left">Back</a>
         </form>
     </div>
 @endsection
