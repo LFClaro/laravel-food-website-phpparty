@@ -23,6 +23,9 @@ Route::get('/', function () {
 Route::get('/home', function () {
     return view('home');
 });
+Route::get('/sitemap', function () {
+    return view('sitemap');
+});
 
 Route::resource('/restaurants', RestaurantController::class);
 Route::resource('/recipes', RecipeController::class);
