@@ -20,7 +20,7 @@
                             {{ method_field('PATCH') }}
                             @csrf
 
-                            @include('restaurant-review.create')
+                            @include('restaurantreview.create')
 
                         </form>
                     </div>
