@@ -6,6 +6,7 @@
         <li class="nav-item"><a href="/restaurants" class="nav-link text-uppercase font-weight-bold">Restaurant</a></li>
         <li class="nav-item"><a href="/pages/contact.php" class="nav-link text-uppercase font-weight-bold">Contact</a></li>
         <li class="nav-item"><a href="/pages/about.php" class="nav-link text-uppercase font-weight-bold">About</a></li>
+        <li class="nav-item"><a href="/sitemap" class="nav-link text-uppercase font-weight-bold">Site Map</a></li>
         <li class="nav-item"><input type="search" id="src" name="src"><a href="/pages/search.php"><img src="{{asset('/img/search_icon.png')}}" width="22" height="23"></a></li>
         <li class="nav-item"><a href="/login" class="btn btn-secondary nav-link  ms-2 btn-sm">Log In</a></li>
     </ul>

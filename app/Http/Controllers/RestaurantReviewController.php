@@ -26,8 +26,7 @@ class RestaurantReviewController extends Controller
 
         $restaurantReview = RestaurantReview::create($request->all());
 
-        return redirect()->route('restaurantreviews.index')
-            ->with('success', 'RestaurantReview created successfully.');
+        return redirect('restaurantreview.index');
     }
 
     public function show($id)
@@ -46,12 +45,11 @@ class RestaurantReviewController extends Controller
 
     public function update(Request $request, RestaurantReview $restaurantReview)
     {
-        request()->validate(RestaurantReview::$rules);
+//        request()->validate(RestaurantReview::$rules);
 
         $restaurantReview->update($request->all());
 
-        return redirect()->route('restaurantreviews.index')
-            ->with('success', 'RestaurantReview updated successfully');
+        return redirect('/review');
     }
 
     public function destroy($id)

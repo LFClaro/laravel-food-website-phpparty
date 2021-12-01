@@ -10,7 +10,7 @@
 @section('content')
     <div class="container align-items-center justify-content-center">
         <h1 class="text-center">Restaurant List</h1>
-        <p class="text-center"><a href="{{ url("restaurantreview/create") }}" class="btn btn-success text-light">Add Review</a></p>
+        <p class="text-center"><a href="{{ url("review/create") }}" class="btn btn-success text-light">Add Review</a></p>
         <table class="table table-striped table-light text-dark table-hover">
             <thead>
             <tr class="text-center text-black">

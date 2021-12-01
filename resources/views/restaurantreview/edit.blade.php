@@ -1,31 +1,32 @@
-@extends('layouts.app')
+@extends('layouts.main')
 
-@section('template_title')
-    Update Restaurant Review
+@section( 'title')
+    Update Review
 @endsection
 
 @section('content')
-    <section class="content container-fluid">
-        <div class="">
-            <div class="col-md-12">
+    <div class="container align-items-center justify-content-center">
+        <form action="{{ url('review', $restaurantReview->id) }}" method="post">
+            @csrf
+            @method('PUT')
+            <div class="form-group">
+                <label for="Comment">Name: </label>
+                <input type="text" class="form-control" name="comment" id="comment" value="{{ old('comment',$restaurantReview->comment) }}"
+                       placeholder="Enter comment">
+            </div>
 
-                @includeif('partials.errors')
-
-                <div class="card card-default">
-                    <div class="card-header">
-                        <span class="card-title">Update Restaurant Review</span>
-                    </div>
-                    <div class="card-body">
-                        <form method="POST" action="{{ route('restaurant-reviews.update', $restaurantReview->id) }}"  role="form" enctype="multipart/form-data">
-                            {{ method_field('PATCH') }}
-                            @csrf
-
-                            @include('restaurantreview.create')
-
-                        </form>
-                    </div>
+            <br />
+            <div class="row">
+                <div class="col">
+                    <a href="{{ url('review') }}" id="btn_back" class="btn btn-danger text-light float-start">Back</a>
+                </div>
+                <div class="col">
+                    <button type="submit" name="editReview"
+                            class="btn btn-success text-light float-end" id="btn-submit">
+                        Update Comment
+                    </button>
                 </div>
             </div>
-        </div>
-    </section>
+        </form>
+    </div>
 @endsection

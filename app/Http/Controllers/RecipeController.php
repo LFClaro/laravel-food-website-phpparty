@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Country;
 use App\Models\Recipe;
+use App\Models\RecipeReview;
 use Illuminate\Http\Request;
 
 class RecipeController extends Controller
@@ -50,7 +51,8 @@ class RecipeController extends Controller
      */
     public function show(Recipe $recipe)
     {
-        return view('recipes.show', ['recipes' => $recipe]);
+        $reviews = RecipeReview::all();
+        return view('recipes.show', ['recipes' => $recipe], compact('reviews'));
     }
 
     /**
