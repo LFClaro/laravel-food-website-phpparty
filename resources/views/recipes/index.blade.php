@@ -10,7 +10,7 @@
 @section('content')
     <div class="container align-items-center justify-content-center">
         <h1 class="text-center">Recipe List</h1>
-        <table class="table table-striped table-dark table-hover">
+        <table class="table table-striped table-light text-dark table-hover">
             <thead>
             <tr>
                 <th>NAME</th>
