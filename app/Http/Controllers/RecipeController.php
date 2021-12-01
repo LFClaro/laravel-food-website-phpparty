@@ -50,7 +50,9 @@ class RecipeController extends Controller
      */
     public function show(Recipe $recipe)
     {
+        $recipes = Recipe::with('reviews')->get();
         return view('recipes.show', ['recipes' => $recipe]);
+        //return view('recipes.show', ['recipes' => $recipe]);
     }
 
     /**

@@ -32,7 +32,7 @@
                     <td><a href="{{ url('recipes', $r->id) }}" class="text-light">{{ $r->calories }}</a></td>
                     <td><a href="{{ url('recipes', $r->id) }}" class="text-light">{{ $r->servings }}</a></td>
                     <td><a href="{{ url('recipes', $r->id) }}" class="text-light">{{ $r->rating }}</a></td>
-                    <td><a href="{{ url('recipes', $r->id) }}" class="text-light">{{ $r->country->name }}</a></td>
+                    <td><a href="{{ url('recipes', $r->id) }}" class="text-light">{{ $r->country->name}}</a></td>
                     <td>
                         <form method="get" action="{{ url('recipes/' . $r->id . '/edit')}}">
                             @csrf

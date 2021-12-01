@@ -21,4 +21,9 @@ class Recipe extends Model
     {
         return $this->belongsTo('App\Models\Country','country_id');
     }
+
+    public function reviews()
+    {
+        return $this->belongsTo('App\Models\RecipeReview','id');
+    }
 }
