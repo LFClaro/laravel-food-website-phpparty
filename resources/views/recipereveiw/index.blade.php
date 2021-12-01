@@ -25,8 +25,8 @@
                     <td>{{ $rev->user_id }}</td>
                     <td>{{ $rev->recipe_id }}</td>
                     <td>{{ $rev->comment }}</td>
-                    <td>
-                        <form method="get" action="{{ url('recipes/' . $rev->id . '/edit')}}">
+                   {{-- <td>
+                        <form method="get" action="{{ url('recipereview/' . $rev->id . '/edit')}}">
                             @csrf
                             <input type="submit" class="btn btn-primary me-2" value="Update" />
                         </form>
@@ -37,7 +37,7 @@
                             @method('DELETE')
                             <input type="submit" class="btn btn-danger me-2" value="Delete" />
                         </form>
-                    </td>
+                    </td>--}}
                 </tr>
             @endforeach
             </tbody>
