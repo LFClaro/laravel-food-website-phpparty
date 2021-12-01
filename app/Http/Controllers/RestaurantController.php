@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Country;
+use App\Models\RecipeReview;
 use App\Models\Restaurant;
 use App\Models\RestaurantReview;
 use Illuminate\Http\Request;
@@ -52,7 +53,9 @@ class RestaurantController extends Controller
      */
     public function show(Restaurant $restaurant)
     {
-        return view('restaurants.show', ['restaurants' => $restaurant]);
+        $reviews = RestaurantReview::all();
+        return view('restaurants.show', ['restaurants' => $restaurant], compact('reviews'));
+        //return view('restaurants.show', ['restaurants' => $restaurant]);
     }
 
     /**
