@@ -1,5 +1,9 @@
 @extends('layouts.main')
 
+@section( 'title')
+    About Us
+@endsection
+
 @section(('header'))
     @parent
 @endsection
@@ -28,10 +32,12 @@
 
 
                 <div class="col">
-                        <img src="{{asset('/img/SVG/undraw_cooking_teal.svg')}}" width="140" height="140" alt="Two people enjoying food together"/>
+                        <img src="{{asset('/img/profiles/luiz-profile.jpg')}}" width="180" height="180" alt="Luiz Claro profile pic"/>
 
-                    <h2 class="text-warning">Put Your Name Here</h2>
-                    <p>Place Your Personal Info Here</p>
+                    <h2 class="text-warning">Luiz Claro</h2>
+                    <p>Hey, I'm Luiz! I'm an experienced Video Producer with 12 years of work in the film and TV industry.</p>
+                    <p>My media and communication skills have led me to develop an interest in all things related to media.</p>
+                    <p>So, I've now decided to expand my skill set by becoming a Full Stack Developer for web and mobile apps so that I can offer complete multimedia solutions for my clients.</p>
                     <p><a class="btn btn-secondary" href="/contact">Contact &raquo;</a></p>
                 </div><!-- /.col-lg-4 -->
 

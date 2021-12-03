@@ -1,5 +1,9 @@
 @extends('layouts.main')
 
+@section( 'title')
+    Contact Us
+@endsection
+
 @section(('header'))
     @parent
 @endsection
