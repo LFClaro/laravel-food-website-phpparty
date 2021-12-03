@@ -26,7 +26,7 @@
                 <h2 class="text-warning featurette-heading">Let's talk about everything!</h2>
                 <p class="lead">We would love to hear from you, tells us about you like, your concerns, your questions or just whats your favourite meal or restaurant!</p>
 
-                <img src="{{asset('/img/SVG/undraw_Eating_together_teal.svg')}}" width="360" height="360" alt="Two people enjoying food together"/>
+                <img src="{{asset('/img/SVG/convo.svg')}}" width="360" height="360" alt="Two people enjoying food together"/>
             </div><!-- /.col-lg-4 -->
 
             <div class="col">
