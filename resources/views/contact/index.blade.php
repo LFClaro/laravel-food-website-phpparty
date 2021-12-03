@@ -31,7 +31,7 @@
 
             <div class="col">
                 <h2 class="text-light featurette-heading">Thanks in advance!</h2> <!-- TODO use get or post method to send data -->
-                <form action="{{ url('contact') }}" method="post" id="contactForm" name="contactForm">
+                <form action="{{ url('contact') }}" method="post">
                     @csrf
                     <div>
                         <div class="form-group">

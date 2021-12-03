@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Contact extends Model
 {
     use HasFactory;
-    public $timestamps = true;
+    public $timestamps = false; // switched to false
 //  TODO - add => id?, name, email, subject, message
     protected $fillable = ['name', 'email', 'subject','message'];
 }
