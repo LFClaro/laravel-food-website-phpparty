@@ -53,7 +53,7 @@
                 <li class="list-inline-item"><a href="/contact">Contact</a></li>
                 <li class="list-inline-item"><a href="/privacy">Privacy Policy</a></li>
             </ul>
-            <p class="copyright">Humber College &copy; 2018</p>
+            <p class="copyright">Humber College &copy; 2021</p>
         </footer>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
