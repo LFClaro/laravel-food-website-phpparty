@@ -12,11 +12,9 @@
         <br><br><br>
         <!-- Each person can have about me section -->
         <div class="container marketing">
-
-            <!-- Three columns of text below the carousel -->
             <div class="row">
                 <div class="col">
-                        <img src="{{asset('/img/profiles/tim-profile.jpg')}}" width="180" height="180" alt="Two people enjoying food together"/>
+                        <img src="{{asset('/img/profiles/tim-profile.jpg')}}" width="180" height="180" alt="Tim Burns Profile pic"/>
 
                     <h2 class="text-warning">Tim Burns</h2>
                     <p>Hi, I'm Tim. I have previously worked in financial sales and switched my career path during the pandemic.</p>
@@ -32,9 +30,9 @@
                 <div class="col">
                         <img src="{{asset('/img/SVG/undraw_cooking_teal.svg')}}" width="140" height="140" alt="Two people enjoying food together"/>
 
-                    <h2>Recipes</h2>
-                    <p>Here you can have access to recipes from all over the world. We have a database with numerous recipes from more than 80 countries for your taste.</p>
-                    <p><a class="btn btn-secondary" href="/recipes">View Recipes &raquo;</a></p>
+                    <h2 class="text-warning">Put Your Name Here</h2>
+                    <p>Place Your Personal Info Here</p>
+                    <p><a class="btn btn-secondary" href="/contact">Contact &raquo;</a></p>
                 </div><!-- /.col-lg-4 -->
 
 
@@ -43,9 +41,9 @@
                 <div class="col">
                         <img src="{{asset('/img/SVG/undraw_Eating_together_teal.svg')}}" width="140" height="140" alt="Two people enjoying food together"/>
 
-                    <h2>Restaurants</h2>
-                    <p>Looking to find your new favourite restaurant? You've come to the right place! We have a database with different cuisines from around the globe.</p>
-                    <p><a class="btn btn-secondary" href="/restaurants">View Restaurants &raquo;</a></p>
+                    <h2 class="text-warning">Put Your Name Here</h2>
+                    <p>Place Your Personal Info Here</p>
+                    <p><a class="btn btn-secondary" href="/contact">Contact &raquo;</a></p>
                 </div><!-- /.col-lg-4 -->
 
 
@@ -54,9 +52,9 @@
                 <div class="col">
                         <img src="{{asset('/img/SVG/undraw_online_groceries_teal.svg')}}" width="140" height="140" alt="Tim Burns Profile picture"/>
 
-                    <h2>Your Menus</h2>
-                    <p>Turn it into a unique experience for your taste buds. Sign up now to receive tailor-made recommendations based on your taste and preferences.</p>
-                    <p><a class="btn btn-secondary" href="#">Sign Up &raquo;</a></p>
+                    <h2 class="text-warning">Put Your Name Here</h2>
+                    <p>Place Your Personal Info Here</p>
+                    <p><a class="btn btn-secondary" href="#/contact">Contact &raquo;</a></p>
                 </div><!-- /.col-lg-4 -->
             </div><!-- /.row -->
 
