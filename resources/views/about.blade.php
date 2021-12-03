@@ -41,16 +41,15 @@
                     <p><a class="btn btn-secondary" href="/contact">Contact &raquo;</a></p>
                 </div><!-- /.col-lg-4 -->
 
-
-
-
                 <div class="col">
-                        <img src="{{asset('/img/SVG/undraw_Eating_together_teal.svg')}}" width="140" height="140" alt="Two people enjoying food together"/>
-
-                    <h2 class="text-warning">Put Your Name Here</h2>
-                    <p>Place Your Personal Info Here</p>
+                    <img src="{{asset('/img/profiles/alex-profile.jpeg')}}" width="180" height="180" alt="yunqian Xu profile pic"/>
+                    <h2 class="text-warning">Yunqian(Alex) Xu</h2>
+                    <p>Hey, I'm Alex! This is my first touch to this field.</p>
+                    <p>I was attracted by the story of Harry Potter when I was young.</p>
+                    <p>I image I am deploying magic while I am coding sometime. And I hope my kids may live in a magic world I coded in the future.</p>
                     <p><a class="btn btn-secondary" href="/contact">Contact &raquo;</a></p>
                 </div><!-- /.col-lg-4 -->
+
 
 
 
