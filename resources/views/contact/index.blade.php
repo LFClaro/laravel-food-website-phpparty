@@ -32,6 +32,7 @@
             <div class="col">
                 <h2 class="text-light featurette-heading">Thanks in advance!</h2> <!-- TODO use get or post method to send data -->
                 <form action="{{ url('contact') }}" method="post" id="contactForm" name="contactForm">
+                    @csrf
                     <div>
                         <div class="form-group">
                             <input type="text" class="form-control" name="name" id="name" placeholder="Your name" required>
