@@ -21,7 +21,7 @@
                         <img src="{{asset('/img/profiles/tim-profile.jpg')}}" width="180" height="180" alt="Tim Burns Profile pic"/>
 
                     <h2 class="text-warning">Tim Burns</h2>
-                    <p>Hi, I'm Tim. I have previously worked in financial sales and switched my career path during the pandemic.</p>
+                    <p>Hi, I'm Tim! I have previously worked in financial sales and switched my career path during the pandemic.</p>
                     <p>Now I am focusing on coding and managing great projects, from web apps and mobile apps to working on database optimization and management.</p>
                     <p>I am blending my love for code and project building with my experience in sales and managing people. </p>
                     <p><a class="btn btn-secondary" href="/contact">Contact &raquo;</a></p>

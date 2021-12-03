@@ -20,7 +20,7 @@
         <div class="col-md-5">
             <!--                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>-->
             <div class ="featurette-image img-fluid mx-auto">
-                <img width="450" height="450" src="{{asset('/img/SVG/undraw_diet_orange.svg')}}" alt="Person choosing form different diets" />
+                <img width="450" height="450" src="{{asset('/img/SVG/intro.svg')}}" alt="Person choosing form different diets" />
             </div>
         </div>
     </div>
@@ -38,7 +38,7 @@
             <div class="col-md-5 order-md-1">
                 <!--                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>-->
                 <div class ="featurette-image img-fluid mx-auto">
-                    <img width="450" height="450" src="{{asset('/img/SVG/undraw_tourist_map_re_orange.svg')}}" alt="A map of an unmarked neighbourhood" />
+                    <img width="450" height="450" src="{{asset('/img/SVG/serve.svg')}}" alt="A map of an unmarked neighbourhood" />
                 </div>
             </div>
         </div>
@@ -53,7 +53,7 @@
             <div class="col-md-5">
                 <!--                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>-->
                 <div class ="featurette-image img-fluid mx-auto">
-                    <img width="450" height="450" src="{{asset('/img/SVG/undraw_diet_orange.svg')}}" alt="Person choosing form different diets" />
+                    <img width="450" height="450" src="{{asset('/img/SVG/consent.svg')}}" alt="Person choosing form different diets" />
                 </div>
             </div>
         </div>
@@ -69,7 +69,7 @@
             <div class="col-md-5 order-md-1">
                 <!--                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>-->
                 <div class ="featurette-image img-fluid mx-auto">
-                    <img width="450" height="450" src="{{asset('/img/SVG/undraw_tourist_map_re_orange.svg')}}" alt="A map of an unmarked neighbourhood" />
+                    <img width="450" height="450" src="{{asset('/img/SVG/collect.svg')}}" alt="A map of an unmarked neighbourhood" />
                 </div>
             </div>
         </div>
@@ -85,7 +85,7 @@
             <div class="col-md-5">
                 <!--                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>-->
                 <div class ="featurette-image img-fluid mx-auto">
-                    <img width="450" height="450" src="{{asset('/img/SVG/undraw_diet_orange.svg')}}" alt="Person choosing form different diets" />
+                    <img width="450" height="450" src="{{asset('/img/SVG/limit.svg')}}" alt="Person choosing form different diets" />
                 </div>
             </div>
         </div>
@@ -100,7 +100,7 @@
             <div class="col-md-5 order-md-1">
                 <!--                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>-->
                 <div class ="featurette-image img-fluid mx-auto">
-                    <img width="450" height="450" src="{{asset('/img/SVG/undraw_tourist_map_re_orange.svg')}}" alt="A map of an unmarked neighbourhood" />
+                    <img width="450" height="450" src="{{asset('/img/SVG/target.svg')}}" alt="A map of an unmarked neighbourhood" />
                 </div>
             </div>
         </div>
@@ -115,7 +115,7 @@
             <div class="col-md-5">
                 <!--                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>-->
                 <div class ="featurette-image img-fluid mx-auto">
-                    <img width="450" height="450" src="{{asset('/img/SVG/undraw_diet_orange.svg')}}" alt="Person choosing form different diets" />
+                    <img width="450" height="450" src="{{asset('/img/SVG/security.svg')}}" alt="Person choosing form different diets" />
                 </div>
             </div>
         </div>
@@ -129,7 +129,7 @@
             <div class="col-md-5 order-md-1">
                 <!--                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>-->
                 <div class ="featurette-image img-fluid mx-auto">
-                    <img width="450" height="450" src="{{asset('/img/SVG/undraw_tourist_map_re_orange.svg')}}" alt="A map of an unmarked neighbourhood" />
+                    <img width="450" height="450" src="{{asset('/img/SVG/open.svg')}}" alt="A map of an unmarked neighbourhood" />
                 </div>
             </div>
         </div>
@@ -146,7 +146,7 @@
             <div class="col-md-5">
                 <!--                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>-->
                 <div class ="featurette-image img-fluid mx-auto">
-                    <img width="450" height="450" src="{{asset('/img/SVG/undraw_diet_orange.svg')}}" alt="Person choosing form different diets" />
+                    <img width="450" height="450" src="{{asset('/img/SVG/cust.svg')}}" alt="Person choosing form different diets" />
                 </div>
             </div>
         </div>
@@ -170,7 +170,7 @@
             <div class="col-md-5 order-md-1">
                 <!--                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>-->
                 <div class ="featurette-image img-fluid mx-auto">
-                    <img width="450" height="450" src="{{asset('/img/SVG/undraw_tourist_map_re_orange.svg')}}" alt="A map of an unmarked neighbourhood" />
+                    <img width="450" height="450" src="{{asset('/img/SVG/engineer.svg')}}" alt="A map of an unmarked neighbourhood" />
                 </div>
             </div>
         </div>
@@ -189,7 +189,7 @@
             <div class="col-md-5">
                 <!--                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>-->
                 <div class ="featurette-image img-fluid mx-auto">
-                    <img width="450" height="450" src="{{asset('/img/SVG/undraw_diet_orange.svg')}}" alt="Person choosing form different diets" />
+                    <img width="450" height="450" src="{{asset('/img/SVG/website.svg')}}" alt="Person choosing form different diets" />
                 </div>
             </div>
         </div>
