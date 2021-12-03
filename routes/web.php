@@ -17,15 +17,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/home', function () {
-    return view('home');
-});
-Route::get('/sitemap', function () {
-    return view('sitemap');
-});
+Route::get('/', function () { return view('welcome');});
+
+Route::get('/home', function () { return view('home'); });
+
+Route::get('/sitemap', function () { return view('sitemap'); });
+
+Route::get('/about', function () { return view('about'); });
+
+Route::get('/privacy', function () { return view('privacy'); });
+
+Route::get('/contact', function () { return view('contact'); });
 
 Route::resource('/restaurants', RestaurantController::class);
 Route::resource('/recipes', RecipeController::class);

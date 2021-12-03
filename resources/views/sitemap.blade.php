@@ -22,9 +22,9 @@
                 <p><a href="/recipereview" class="nav-link text-uppercase font-weight-bold text-light">Recipe Reviews</a></p>
                 <p><a href="/restaurants" class="nav-link text-uppercase font-weight-bold text-light">Restaurants</a></p>
                 <p><a href="/review" class="nav-link text-uppercase font-weight-bold text-light">Restaurant Reviews</a></p>
-                <p><a href="/pages/contact.php" class="nav-link text-uppercase font-weight-bold text-light">Contact</a></p>
-                <p><a href="/pages/contact.php" class="nav-link text-uppercase font-weight-bold text-light">Recipe Reviews</a></p>
-                <p><a href="/pages/about.php" class="nav-link text-uppercase font-weight-bold text-light">About</a></p>
+                <p><a href="/contact" class="nav-link text-uppercase font-weight-bold text-light">Contact</a></p>
+                <p><a href="/privacy" class="nav-link text-uppercase font-weight-bold text-light">Privacy</a></p>
+                <p><a href="/about" class="nav-link text-uppercase font-weight-bold text-light">About</a></p>
         </div>
 
 @endsection
