@@ -23,8 +23,8 @@
             </thead>
             <tbody>
             @foreach($contacts as $c)
-                <tr onclick="window.location='{{ url('contacts', $c->id) }}';">
-                    <td><a href="{{ url('contacts', $c->id) }}" class="link-info text-decoration-none">{{ $c->name }}</a></td>
+                <tr onclick="window.location='{{ url('contact', $c->id) }}';">
+                    <td><a href="{{ url('contact', $c->id) }}" class="link-info text-decoration-none">{{ $c->name }}</a></td>
                     <td>{{ $c->email }}</td>
                     <td>{{ $c->subject }}</td>
                     <td>{{ $c->message }}</td>
