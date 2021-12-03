@@ -14,8 +14,11 @@ class ContactController extends Controller
      */
     public function index()
     {
-        //
-        return view('contact.index');
+        //TODO show only contact message from current user - or all for admin
+        //$contacts = Contact::with('user')->get();
+        $contacts = Contact::all();
+        return view('contact.index', compact('contacts'));
+       //return view('contact.create');
     }
 
     /**
@@ -51,6 +54,7 @@ class ContactController extends Controller
     public function show(Contact $contact)
     {
         //
+        return view('contact.show', ['contacts' => $contact]);
     }
 
     /**
@@ -62,6 +66,7 @@ class ContactController extends Controller
     public function edit(Contact $contact)
     {
         //
+        return view('contact.edit', ['contacts' => $contact]);
     }
 
     /**
@@ -74,6 +79,8 @@ class ContactController extends Controller
     public function update(Request $request, Contact $contact)
     {
         //
+        $contact->update($request->all());
+        return redirect('contact');
     }
 
     /**
@@ -85,5 +92,7 @@ class ContactController extends Controller
     public function destroy(Contact $contact)
     {
         //
+        $contact->delete();
+        return redirect('recipes');
     }
 }

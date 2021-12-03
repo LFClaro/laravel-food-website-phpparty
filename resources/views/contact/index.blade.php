@@ -1,69 +1,52 @@
 @extends('layouts.main')
 
 @section( 'title')
-    Contact Us
+    All Your messages
 @endsection
 
 @section(('header'))
     @parent
 @endsection
 @section('content')
-
-
-
-    <!-- TODO: need to create contact table or someplace to send the form to
-    TODO - or look up how she does the emails-->
-
-
-    <div class="container marketing">
-
-        <!-- Three columns of text below the carousel -->
-        <div class="row">
-            <h1 class="featurette-heading text-light text-center">Contact PHParty Below!</h1>
-
-
-            <div class="col">
-                <h2 class="text-warning featurette-heading">Let's talk about everything!</h2>
-                <p class="lead">We would love to hear from you, tells us about you like, your concerns, your questions or just whats your favourite meal or restaurant!</p>
-
-                <img src="{{asset('/img/SVG/convo.svg')}}" width="360" height="360" alt="Two people enjoying food together"/>
-            </div><!-- /.col-lg-4 -->
-
-            <div class="col">
-                <h2 class="text-light featurette-heading">Thanks in advance!</h2> <!-- TODO use get or post method to send data -->
-                <form action="{{ url('contact') }}" method="post">
-                    @csrf
-                    <div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" name="name" id="name" placeholder="Your name" required>
-                        </div>
-                    </div>
-                    <div class="">
-                        <div class="form-group">
-                            <input type="text" class="form-control" name="email" id="email" placeholder="Email" required>
-                        </div>
-                    </div>
-                    <div class="">
-                        <div class="form-group">
-                            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="form-group">
-                            <textarea class="form-control" name="message" id="message" cols="30" rows="7" placeholder="Write your message" required></textarea>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <input type="submit" value="Send Message" class="btn-primary rounded py-2 px-4">
-                            <span class="submitting"></span>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
+    <div class="container align-items-center justify-content-center">
+        <h1 class="text-center">Messages</h1>
+        <p class="text-center"><a href="{{ url("contact/create") }}" class="btn btn-success text-light">Send us a message</a></p>
+        <table class="table table-striped table-light text-dark table-hover">
+            <thead class="text-center text-black text-capitalize">
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Subject</th>
+                <th>Message</th>
+                <th colspan="2">Options</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach($contacts as $c)
+                <tr onclick="window.location='{{ url('contacts', $c->id) }}';">
+                    <td><a href="{{ url('contacts', $c->id) }}" class="link-info text-decoration-none">{{ $c->name }}</a></td>
+                    <td>{{ $c->email }}</td>
+                    <td>{{ $c->subject }}</td>
+                    <td>{{ $c->message }}</td>
+                    <td>
+                        <form method="get" action="{{ url('contact/' . $c->id . '/edit')}}">
+                            @csrf
+                            <input type="submit" class="btn btn-primary me-2" value="Update" />
+                        </form>
+                    </td>
+                    <td>
+                        <form method="post" action="{{ url('contact/' . $c->id)}}">
+                            @csrf
+                            @method('DELETE')
+                            <input type="submit" class="btn btn-danger me-2" value="Delete" />
+                        </form>
+                    </td>
+                </tr>
+            @endforeach
+            </tbody>
+        </table>
+        <br />
     </div>
-
 @endsection
 @section('footer')
     @parent

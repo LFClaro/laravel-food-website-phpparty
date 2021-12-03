@@ -1,74 +1,64 @@
 @extends('layouts.main')
 
 @section( 'title')
-    Add Recipe
+    Contact Us
 @endsection
 
+@section(('header'))
+    @parent
+@endsection
 @section('content')
-    <div class="container align-items-center justify-content-center">
-        <h1>Add Recipe </h1>
-        <form action="{{ url('recipes') }}" method="post">
-            @csrf
-            <div class="form-group">
-                <label for="make">Name: </label>
-                <input type="text" class="form-control" name="name" id="name"
-                       placeholder="Enter Name">
+
+    <div class="container marketing">
+
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+            <h1 class="featurette-heading text-light text-center">Contact PHParty Below!</h1>
+
+
+            <div class="col">
+                <h2 class="text-warning featurette-heading">Let's talk about everything!</h2>
+                <p class="lead">We would love to hear from you, tells us about you like, your concerns, your questions or just whats your favourite meal or restaurant!</p>
+
+                <img src="{{asset('/img/SVG/convo.svg')}}" width="360" height="360" alt="Two people enjoying food together"/>
+            </div><!-- /.col-lg-4 -->
+
+            <div class="col">
+                <h2 class="text-light featurette-heading">Thanks in advance!</h2> <!-- TODO use get or post method to send data -->
+                <form action="{{ url('contact') }}" method="post">
+                    @csrf
+                    <div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="name" id="name" placeholder="Your name" required>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="email" id="email" placeholder="Email" required>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group">
+                            <textarea class="form-control" name="message" id="message" cols="30" rows="7" placeholder="Write your message" required></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <input type="submit" value="Send Message" class="btn-primary rounded py-2 px-4">
+                            <span class="submitting"></span>
+                        </div>
+                    </div>
+                </form>
             </div>
-            <div class="form-group">
-                <label for="model">Description: </label>
-                <textarea type="text" class="form-control" name="description" id="description"
-                          placeholder="Enter description"></textarea>
-            </div>
-            <div class="form-group">
-                <label for="year">Ingredients: </label>
-                <textarea type="text" class="form-control" name="ingredients" id="ingredients"
-                          placeholder="Enter ingredients"></textarea>
-            </div>
-            <div class="form-group">
-                <label for="year">Steps: </label>
-                <textarea type="text" class="form-control" name="steps" id="steps"
-                          placeholder="Enter steps"></textarea>
-            </div>
-            <div class="form-group">
-                <label for="year">Website: </label>
-                <input type="text" class="form-control" name="website" id="website"
-                       placeholder="Enter website">
-            </div>
-            <div class="form-group">
-                <label for="year">Comments: </label>
-                <textarea type="text" class="form-control" name="comments" id="comments"
-                          placeholder="Enter comments"></textarea>
-            </div>
-            <div class="form-group">
-                <label for="make">Calories: </label>
-                <input type="number" class="form-control" name="calories" id="calories"
-                       placeholder="Enter calories" min="0" max="32767">
-            </div>
-            <div class="form-group">
-                <label for="make">Serving: </label>
-                <input type="number" class="form-control" name="serving" id="serving"
-                       placeholder="Enter serving" min="0" max="255">
-            </div>
-            <div class="form-group">
-                <label for="make">Rating: </label>
-                <input type="number" class="form-control" name="rating" id="rating"
-                       placeholder="Enter rating" min="0" max="5">
-            </div>
-            <div class="form-group">
-                <label for="country_id">Country: </label>
-                <select class="form-control" name="country_id" id="country_id" value="">
-                    @foreach($countries as $country)
-                        // TODO: logic for selected country
-                        <option value="{{$country->id}}">{{$country->name}}</option>
-                    @endforeach
-                </select>
-            </div>
-            <button type="submit" name="addRecipe"
-                    class="btn btn-success float-right" id="btn-submit">
-                Add Recipe
-            </button>
-            <br />
-            <a href="{{ url('recipes') }}" id="btn_back" class="btn btn-danger float-left">Back</a>
-        </form>
+        </div>
     </div>
+
+@endsection
+@section('footer')
+    @parent
 @endsection
