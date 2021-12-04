@@ -29,6 +29,8 @@ Route::get('/about', function () { return view('about'); });
 
 Route::get('/privacy', function () { return view('privacy'); });
 
+Route::get('/faq', function () { return view('faq'); });
+
 Route::get('/search',[SearchController::class,'index']);
 
 Route::resource('/restaurants', RestaurantController::class);

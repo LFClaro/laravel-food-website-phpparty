@@ -36,7 +36,7 @@
 {{--            </div>--}}
 {{--            <div class="form-group">--}}
 {{--                <input type="hidden" class="form-control" name="recipeid" id="recipeid"--}}
-{{--                       placeholder="Enter description"  value="{{$review->recipe_id}}"/>--}}
+{{--                       placeholder="Enter description"  value="{{$recipes->id}}"/>--}}
 {{--            </div>--}}
 {{--            <div class="form-group">--}}
 {{--                <label for="comment">Comment: </label>--}}
