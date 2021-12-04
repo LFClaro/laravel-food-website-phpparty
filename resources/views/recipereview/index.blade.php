@@ -16,32 +16,22 @@
                 <th>User Id</th>
                 <th>Recipe Id</th>
                 <th>Comment</th>
-                <th colspan="2">OPTIONS</th>
+                <th >OPTION</th>
             </tr>
             </thead>
             <tbody>
             @foreach($recipeReview as $rev)
-                <tr>
+                <tr onclick="window.location='{{ url('recipereview', $rev->id) }}';">
                     <td>{{ $rev->user_id }}</td>
                     <td>{{ $rev->recipe_id }}</td>
                     <td>{{ $rev->comment }}</td>
-
-
-
-
-                   {{-- <td>
-                        <form method="get" action="{{ url('recipereview/' . $rev->id . '/edit')}}">
-                            @csrf
-                            <input type="submit" class="btn btn-primary me-2" value="Update" />
-                        </form>
-                    </td>
                     <td>
-                        <form method="post" action="{{ url('recipes/' . $rev->id)}}">
+                        <form method="post" action="{{ url('recipereview/' . $rev->id)}}">
                             @csrf
                             @method('DELETE')
                             <input type="submit" class="btn btn-danger me-2" value="Delete" />
                         </form>
-                    </td>--}}
+                    </td>
                 </tr>
             @endforeach
             </tbody>
