@@ -27,7 +27,7 @@
                     <td>{{ $rev->recipe_id }}</td>
                     <td>{{ $rev->comment }}</td>
                     <td>
-                        <form method="post" action="{{ url('recipereview/'.$rev->id)}}">
+                        <form method="post" action="{{ url('recipereview/' . $rev->id)}}">
                             @csrf
                             @method('DELETE')
                             <input type="submit" class="btn btn-danger me-2" value="Delete" />
