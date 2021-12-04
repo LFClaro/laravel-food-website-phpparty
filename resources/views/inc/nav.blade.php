@@ -24,7 +24,7 @@
 
                 <form action="{{url('/search')}}" method="get">
                     <input type="search" id="src" name="src">
-the category of search item
+                    {{--the category of search item--}}
                     <select name="src_category">
                         <option value="restaurant">Restaurant</option>
                         <option value="recipes">Recipe</option>
