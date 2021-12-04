@@ -10,9 +10,9 @@
             <li class="nav-item"><a href="/about" class="nav-link text-uppercase font-weight-bold">About</a></li>
             <li class="nav-item"><a href="/sitemap" class="nav-link text-uppercase font-weight-bold">Site Map</a></li>
             <li class="nav-item">
-{{--                <input type="search" id="src" name="src">--}}
-{{--                <div class="dropdown">--}}
-{{--                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">--}}
+{{--                <input type="search" id="src" name="src" class="nav-item"/>--}}
+{{--                <div class="dropdown nav-item">--}}
+{{--                    <button class="btn btn-secondary dropdown-toggle nav-item" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">--}}
 {{--                        Category--}}
 {{--                    </button>--}}
 {{--                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">--}}
@@ -22,17 +22,17 @@
 {{--                    </div>--}}
 {{--                </div>--}}
 
-                <form action="{{url('/search')}}" method="get">
-                    <input type="search" id="src" name="src">
-the category of search item
-                    <select name="src_category">
-                        <option value="restaurant">Restaurant</option>
-                        <option value="recipes">Recipe</option>
-                        <option value="countries">Country</option>
-                    </select>
-                    <input type="image" src="{{asset('/img/search_icon.png')}}" width="22" height="23">
-                </form>
-            </li>
+{{--                <form action="{{url('/search')}}" method="get">--}}
+{{--                    <input type="search" id="src" name="src">--}}
+{{--<!--the category of search item -->--}}
+{{--                    <select name="src_category">--}}
+{{--                        <option value="restaurant">Restaurant</option>--}}
+{{--                        <option value="recipes">Recipe</option>--}}
+{{--                        <option value="countries">Country</option>--}}
+{{--                    </select>--}}
+{{--                    <input type="image" src="{{asset('/img/search_icon.png')}}" width="22" height="23">--}}
+{{--                </form>--}}
+{{--            </li>--}}
 
             <li class="nav-item"><a href="/login" class="btn btn-secondary nav-link  ms-2 btn-sm">Log In</a></li>
         </ul>
