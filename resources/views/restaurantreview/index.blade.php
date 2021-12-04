@@ -31,7 +31,6 @@
                     <td>{{$r->create_at}}</td>
                     <td>{{$r->update_at}}</td>
                     <td>
-{{--                        ???--}}
                         <form method="get" action="{{ url('review/' . $r->id . '/edit')}}">
                             @csrf
                             <input type="submit" class="btn btn-primary text-light" value="Update" />

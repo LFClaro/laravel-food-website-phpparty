@@ -1,9 +1,7 @@
 <x-guest-layout>
     <x-auth-card>
         <x-slot name="logo">
-            <a href="/" class="d-flex justify-content-center mb-4">
-                <x-application-logo width=64 height=64 />
-            </a>
+            <img src="{{asset('/img/Logo_transparent.png')}}" width="450"/>
         </x-slot>
 
         <div class="mb-4 text-muted">
