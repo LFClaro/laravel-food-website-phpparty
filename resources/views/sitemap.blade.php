@@ -25,6 +25,7 @@
                 <p><a href="/contact" class="nav-link text-uppercase font-weight-bold text-light">Contact</a></p>
                 <p><a href="/privacy" class="nav-link text-uppercase font-weight-bold text-light">Privacy</a></p>
                 <p><a href="/about" class="nav-link text-uppercase font-weight-bold text-light">About</a></p>
+                <p><a href="/faq" class="nav-link text-uppercase font-weight-bold text-light">FAQ's</a></p>
         </div>
 
 @endsection
