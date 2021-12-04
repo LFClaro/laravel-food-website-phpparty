@@ -4,6 +4,8 @@ use App\Http\Controllers\RestaurantController;
 use App\Http\Controllers\RestaurantReviewController;
 use App\Http\Controllers\RecipeReviewController;
 use App\Http\Controllers\RecipeController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\SearchController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,17 +19,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/home', function () {
-    return view('home');
-});
+Route::get('/', function () { return view('welcome');});
+
+Route::get('/home', function () { return view('home'); });
+
+Route::get('/sitemap', function () { return view('sitemap'); });
+
+Route::get('/about', function () { return view('about'); });
+
+Route::get('/privacy', function () { return view('privacy'); });
+
+Route::get('/search',[SearchController::class,'index']);
 
 Route::resource('/restaurants', RestaurantController::class);
 Route::resource('/recipes', RecipeController::class);
 Route::resource('/recipereview', RecipeReviewController::class);
 Route::resource('/review',RestaurantReviewController::class);
+Route::resource('/contact',ContactController::class);
 
 Route::get('/dashboard', function () {
     return view('dashboard');

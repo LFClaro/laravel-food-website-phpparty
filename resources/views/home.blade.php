@@ -1,5 +1,9 @@
 @extends('layouts.main')
 
+@section( 'title')
+    Main
+@endsection
+
 @section(('header'))
     @parent
 @endsection
