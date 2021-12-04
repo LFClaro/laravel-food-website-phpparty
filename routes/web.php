@@ -5,6 +5,7 @@ use App\Http\Controllers\RestaurantReviewController;
 use App\Http\Controllers\RecipeReviewController;
 use App\Http\Controllers\RecipeController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\SearchController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,7 +29,7 @@ Route::get('/about', function () { return view('about'); });
 
 Route::get('/privacy', function () { return view('privacy'); });
 
-
+Route::get('/search',[SearchController::class,'index']);
 
 Route::resource('/restaurants', RestaurantController::class);
 Route::resource('/recipes', RecipeController::class);

@@ -10,15 +10,27 @@
             <li class="nav-item"><a href="/about" class="nav-link text-uppercase font-weight-bold">About</a></li>
             <li class="nav-item"><a href="/sitemap" class="nav-link text-uppercase font-weight-bold">Site Map</a></li>
             <li class="nav-item">
+{{--                <input type="search" id="src" name="src">--}}
+{{--                <div class="dropdown">--}}
+{{--                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">--}}
+{{--                        Category--}}
+{{--                    </button>--}}
+{{--                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">--}}
+{{--                        <a class="dropdown-item" href="../searchResult_restaurant.blade.php">Restaurant</a>--}}
+{{--                        <a class="dropdown-item" href="../searchResult_recipe.blade.php">Recipe</a>--}}
+{{--                        <a class="dropdown-item" href=../searchResult_country.blade.php>Country</a>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
 
-                <form action="" method="get">
+                <form action="{{url('/search')}}" method="get">
                     <input type="search" id="src" name="src">
-                    <?php//the category of search item?>
+{{--the category of search item--}}
                     <select name="src_category">
                         <option value="restaurant">Restaurant</option>
                         <option value="recipes">Recipe</option>
                         <option value="countries">Country</option>
                     </select>
+                    <input type="submit" style="background: {{asset('/img/search_icon.png')}}" width="22" height="23">
                     <a href="/pages/search.php"><img src="{{asset('/img/search_icon.png')}}" width="22" height="23"></a>
                 </form>
             </li>
