@@ -26,7 +26,7 @@ class RecipeReviewController extends Controller
      */
     public function create()
     {
-        //
+        return view('recipereview.create');
     }
 
     /**
@@ -37,7 +37,8 @@ class RecipeReviewController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        RecipeReview::create($request->all());
+        return redirect('recipereview');
     }
 
     /**

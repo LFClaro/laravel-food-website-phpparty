@@ -7,28 +7,27 @@
 @section('content')
     <div class="container align-items-center justify-content-center">
         <h1>Add Review </h1>
-        <form action="{{ url('recipe_reviews') }}" method="post">
+        <form action="{{ url('recipereview') }}" method="post">
             @csrf
             <div class="form-group">
                 <label for="userid">User Id: </label>
-                <input type="text" class="form-control" name="userid" id="userid"
-                       placeholder="Enter Name" />
+                <input type="text" class="form-control" name="user_id" id="userid"
+                       placeholder="Enter User Id" />
             </div>
             <div class="form-group">
                 <label for="recipeid">Recipe Id: </label>
-                <input type="text" class="form-control" name="recipeid" id="recipeid"
-                          placeholder="Enter description" />
+                <input type="text" class="form-control" name="recipe_id" id="recipeid"
+                          placeholder="Enter id" />
             </div>
             <div class="form-group">
-                <label for="comment">Ingredients: </label>
+                <label for="comment">Comment: </label>
                 <textarea type="text" class="form-control" name="comment" id="comment"
-                          placeholder="Enter ingredients"></textarea>
+                          placeholder="Enter Comments"></textarea>
             </div>
-            <input type="submit" name="addRecipe"
-                    class="btn btn-success float-right" id="btn-submit" value="Comment" />
-
             <br />
-            <a href="{{ url('recipe_reviews') }}" id="btn_back" class="btn btn-danger float-left">Back</a>
+            <input type="submit" name="addReview"
+                    class="btn btn-success float-right" value="Comment" />
+            <a href="{{ url('recipereview') }}" id="btn_back" class="btn btn-success float-left">Back</a>
         </form>
     </div>
 @endsection

@@ -10,7 +10,8 @@
 @section('content')
     <div class="container align-items-center justify-content-center">
         <h1 class="text-center">Recipe Review List</h1>
-        <table class="table table-striped table-dark table-hover">
+        <p class="text-center"><a href="{{ url("recipereview/create") }}" class="btn btn-success text-light">Add Review</a></p>
+        <table class="table table-striped table-light text-dark table-hover">
             <thead>
             <tr>
                 <th>User Id</th>
@@ -26,7 +27,7 @@
                     <td>{{ $rev->recipe_id }}</td>
                     <td>{{ $rev->comment }}</td>
                     <td>
-                        <form method="post" action="{{ url('recipereview/' . $rev->id)}}">
+                        <form method="post" action="{{ url('recipereview/'.$rev->id)}}">
                             @csrf
                             @method('DELETE')
                             <input type="submit" class="btn btn-danger me-2" value="Delete" />
@@ -37,7 +38,6 @@
             </tbody>
         </table>
         <br />
-        <p><a href="{{ url("recipereview/create") }}" class="btn btn-success me-2 float-right">Add a Review</a></p>
     </div>
 @endsection
 @section('footer')
