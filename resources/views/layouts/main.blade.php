@@ -52,6 +52,7 @@
                 <li class="list-inline-item"><a href="/about">About</a></li>
                 <li class="list-inline-item"><a href="/contact">Contact</a></li>
                 <li class="list-inline-item"><a href="/privacy">Privacy Policy</a></li>
+                <li><a href="/faq" class="list-inline-item">FAQ's</a></li>
             </ul>
             <p class="copyright">Humber College &copy; 2021</p>
         </footer>
