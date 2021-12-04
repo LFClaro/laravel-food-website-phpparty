@@ -10,6 +10,7 @@
         <br>
         <p>{{ $recipereview->comment}}</p>
         <br /><br />
+
         <a href="{{ url('recipereview') }}" id="btn_back" class="btn btn-success float-right">Back</a>
     </div>
 @endsection

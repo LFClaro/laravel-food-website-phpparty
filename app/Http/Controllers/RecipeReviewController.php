@@ -11,12 +11,12 @@ class RecipeReviewController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
      */
     public function index()
     {
-        $recipereview = RecipeReview::all();
-        return view('recipereview.index', compact('recipereview'));
+        $recipeReview = RecipeReview::all();
+        return view('recipereview.index', compact('recipeReview'));
     }
 
     /**

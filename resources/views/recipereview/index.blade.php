@@ -20,11 +20,15 @@
             </tr>
             </thead>
             <tbody>
-            @foreach($recipereview as $rev)
-                <tr onclick="window.location='{{ url('recipereview', $rev->id) }}';">
+            @foreach($recipeReview as $rev)
+                <tr>
                     <td>{{ $rev->user_id }}</td>
                     <td>{{ $rev->recipe_id }}</td>
                     <td>{{ $rev->comment }}</td>
+
+
+
+
                    {{-- <td>
                         <form method="get" action="{{ url('recipereview/' . $rev->id . '/edit')}}">
                             @csrf
