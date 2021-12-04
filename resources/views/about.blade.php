@@ -24,12 +24,8 @@
                     <p>Hi, I'm Tim! I have previously worked in financial sales and switched my career path during the pandemic.</p>
                     <p>Now I am focusing on coding and managing great projects, from web apps and mobile apps to working on database optimization and management.</p>
                     <p>I am blending my love for code and project building with my experience in sales and managing people. </p>
-                    <p><a class="btn btn-secondary" href="/contact">Contact &raquo;</a></p>
+                    <p><a class="btn btn-secondary" href="/contact/create">Contact &raquo;</a></p>
                 </div><!-- /.col-lg-4 -->
-
-
-
-
 
                 <div class="col">
                         <img src="{{asset('/img/profiles/luiz-profile.jpg')}}" width="180" height="180" alt="Luiz Claro profile pic"/>
@@ -38,7 +34,7 @@
                     <p>Hey, I'm Luiz! I'm an experienced Video Producer with 12 years of work in the film and TV industry.</p>
                     <p>My media and communication skills have led me to develop an interest in all things media.</p>
                     <p>So, I've decided to expand my skill set by becoming a Full Stack Developer for web and mobile apps so that I can offer complete multimedia solutions for my clients.</p>
-                    <p><a class="btn btn-secondary" href="/contact">Contact &raquo;</a></p>
+                    <p><a class="btn btn-secondary" href="/contact/create">Contact &raquo;</a></p>
                 </div><!-- /.col-lg-4 -->
 
                 <div class="col">
@@ -47,19 +43,15 @@
                     <p>Hey, I'm Alex! This is my first touch to this field.</p>
                     <p>I was attracted by the story of Harry Potter when I was young.</p>
                     <p>I image I am deploying magic while I am coding sometime. And I hope my kids may live in a magic world I coded in the future.</p>
-                    <p><a class="btn btn-secondary" href="/contact">Contact &raquo;</a></p>
+                    <p><a class="btn btn-secondary" href="/contact/create">Contact &raquo;</a></p>
                 </div><!-- /.col-lg-4 -->
-
-
-
-
 
                 <div class="col">
                         <img src="{{asset('/img/SVG/undraw_online_groceries_teal.svg')}}" width="140" height="140" alt="Tim Burns Profile picture"/>
 
                     <h2 class="text-warning">Put Your Name Here</h2>
                     <p>Place Your Personal Info Here</p>
-                    <p><a class="btn btn-secondary" href="#/contact">Contact &raquo;</a></p>
+                    <p><a class="btn btn-secondary" href="#/contact/create">Contact &raquo;</a></p>
                 </div><!-- /.col-lg-4 -->
             </div><!-- /.row -->
 
