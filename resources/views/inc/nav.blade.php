@@ -24,14 +24,13 @@
 
                 <form action="{{url('/search')}}" method="get">
                     <input type="search" id="src" name="src">
-{{--the category of search item--}}
+the category of search item
                     <select name="src_category">
                         <option value="restaurant">Restaurant</option>
                         <option value="recipes">Recipe</option>
                         <option value="countries">Country</option>
                     </select>
-                    <input type="submit" style="background: {{asset('/img/search_icon.png')}}" width="22" height="23">
-                    <a href="/pages/search.php"><img src="{{asset('/img/search_icon.png')}}" width="22" height="23"></a>
+                    <input type="image" src="{{asset('/img/search_icon.png')}}" width="22" height="23">
                 </form>
             </li>
 
