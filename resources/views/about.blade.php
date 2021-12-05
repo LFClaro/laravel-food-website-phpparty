@@ -17,6 +17,7 @@
         <!-- Each person can have about me section -->
         <div class="container marketing">
             <div class="row">
+                <!--ABOUT TIM-->
                 <div class="col">
                         <img src="{{asset('/img/profiles/tim-profile.jpg')}}" width="180" height="180" alt="Tim Burns Profile pic"/>
 
@@ -27,10 +28,7 @@
                     <p><a class="btn btn-secondary" href="/contact">Contact &raquo;</a></p>
                 </div><!-- /.col-lg-4 -->
 
-
-
-
-
+                <!--ABOUT LUIZ-->
                 <div class="col">
                         <img src="{{asset('/img/profiles/luiz-profile.jpg')}}" width="180" height="180" alt="Luiz Claro profile pic"/>
 
@@ -41,6 +39,7 @@
                     <p><a class="btn btn-secondary" href="/contact">Contact &raquo;</a></p>
                 </div><!-- /.col-lg-4 -->
 
+                <!--ABOUT ALEX-->
                 <div class="col">
                     <img src="{{asset('/img/profiles/alex-profile.jpeg')}}" width="180" height="180" alt="yunqian Xu profile pic"/>
                     <h2 class="text-warning">Yunqian(Alex) Xu</h2>
@@ -50,15 +49,13 @@
                     <p><a class="btn btn-secondary" href="/contact">Contact &raquo;</a></p>
                 </div><!-- /.col-lg-4 -->
 
-
-
-
-
+                <!--ABOUT CEZMI-->
                 <div class="col">
-                        <img src="{{asset('/img/SVG/undraw_online_groceries_teal.svg')}}" width="140" height="140" alt="Tim Burns Profile picture"/>
+                        <img src="{{asset('/img/prifiles/undraw_online_groceries_teal.svg')}}" width="140" height="140" alt="Cezmi's Profile pic"/>
 
-                    <h2 class="text-warning">Put Your Name Here</h2>
-                    <p>Place Your Personal Info Here</p>
+                    <h2 class="text-warning">Cezmi Aktepe</h2>
+                    <p>Writing codes, designing web pages and creating projects was my dream job since I graduated from high school. I love dealing with computers and tech.</p>
+                    <p>I found a chance to reach my dream job in Canada. Here I am ...</p>
                     <p><a class="btn btn-secondary" href="#/contact">Contact &raquo;</a></p>
                 </div><!-- /.col-lg-4 -->
             </div><!-- /.row -->
