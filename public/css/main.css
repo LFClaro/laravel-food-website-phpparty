@@ -13,7 +13,6 @@
 }
 .navbar .nav-link:hover,
 .navbar .nav-link:focus {
-    color: #fff;
     text-decoration: none;
 }
 
@@ -41,11 +40,66 @@
     color: #555;
 }
 
+#container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    color: #1a1e21;
+}
+
+#map {
+    left: 0;
+    width: 70%;
+    height: 100vh;
+    max-height: 1000px;
+}
+
+#sidebar {
+    position: absolute;
+    width: 30%;
+    overflow-y: scroll;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+
+#sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow-y: scroll;
+    flex-grow: 1;
+}
+
+#sidebar li {
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+#sidebar li:nth-child(odd) {
+    background-color: #fcfcfc;
+}
+
+#sidebar #more {
+    width: 100%;
+}
+
 /* Change navbar styling on small viewports */
 @media (max-width: 991.98px) {
     .navbar {
         background: #fff;
     }
+
+    .navbar-collapse .nav-link:hover,
+    .navbar-collapse .nav-link:focus {
+        background-color: #e9ecef;
+    }
+
     .navbar .navbar-brand, .navbar .nav-link {
         color: #555;
     }

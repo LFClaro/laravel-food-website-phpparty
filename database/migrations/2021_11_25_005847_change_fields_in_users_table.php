@@ -15,7 +15,6 @@ class ChangeFieldsInUsersTable extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->renameColumn('name', 'first_name');
-            $table->renameColumn('name', 'first_name');
             $table->string('email',100)->change();
         });
     }

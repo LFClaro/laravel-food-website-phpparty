@@ -4,9 +4,6 @@
     Main
 @endsection
 
-@section(('header'))
-    @parent
-@endsection
 @section('content')
     <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
@@ -162,7 +159,4 @@
     </div><!-- /.container -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.2/js/bootstrap.min.js"></script>
-@endsection
-@section('footer')
-    @parent
 @endsection

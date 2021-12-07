@@ -4,9 +4,6 @@
     Restaurants
 @endsection
 
-@section(('header'))
-    @parent
-@endsection
 @section('content')
     <div class="container align-items-center justify-content-center">
         <h1 class="text-center">Restaurant List</h1>
@@ -57,7 +54,4 @@
         </table>
         <br />
     </div>
-@endsection
-@section('footer')
-    @parent
 @endsection

@@ -1,14 +1,21 @@
 @section('nav')
     <div id="navbarSupportedContent" class="collapse navbar-collapse align-content-center">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item active"><a href="/home" class="nav-link text-uppercase font-weight-bold">Home<span
+        <ul class="navbar-nav ml-auto text-uppercase font-weight-bold">
+            <li class="nav-item active"><a href="/home" class="nav-link">Home<span
                         class="sr-only"></span></a></li>
-            <li class="nav-item"><a href="/recipes" class="nav-link text-uppercase font-weight-bold">Recipe</a></li>
-            <li class="nav-item"><a href="/restaurants" class="nav-link text-uppercase font-weight-bold">Restaurant</a>
+            <li class="nav-item"><a href="/recipes" class="nav-link">Recipe</a></li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Restaurant
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/restaurants/map">Show Map</a>
+                    <a class="dropdown-item" href="/restaurants">List All</a>
+                </div>
             </li>
-            <li class="nav-item"><a href="/contact/create" class="nav-link text-uppercase font-weight-bold">Contact</a></li>
-            <li class="nav-item"><a href="/about" class="nav-link text-uppercase font-weight-bold">About</a></li>
-            <li class="nav-item"><a href="/sitemap" class="nav-link text-uppercase font-weight-bold">Site Map</a></li>
+            <li class="nav-item"><a href="/contact/create" class="nav-link">Contact</a></li>
+            <li class="nav-item"><a href="/about" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="/sitemap" class="nav-link">Site Map</a></li>
             <li class="nav-item">
 {{--                <input type="search" id="src" name="src" class="nav-item"/>--}}
 {{--                <div class="dropdown nav-item">--}}

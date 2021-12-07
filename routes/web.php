@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () { return view('welcome');});
+Route::get('/', function () { return view('home');});
 
 Route::get('/home', function () { return view('home'); });
 
@@ -30,6 +30,8 @@ Route::get('/about', function () { return view('about'); });
 Route::get('/privacy', function () { return view('privacy'); });
 
 Route::get('/faq', function () { return view('faq'); });
+
+Route::get('/restaurants/map', function () { return view('restaurants.map'); });
 
 Route::get('/search',[SearchController::class,'index']);
 

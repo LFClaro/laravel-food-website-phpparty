@@ -4,9 +4,6 @@
     About Us
 @endsection
 
-@section(('header'))
-    @parent
-@endsection
 @section('content')
 
     <div class="container marketing">
@@ -28,10 +25,8 @@
                     <p><a class="btn btn-secondary" href="/contact/create">Contact &raquo;</a></p>
                 </div><!-- /.col-lg-4 -->
 
-<<<<<<< HEAD
                 <!--ABOUT LUIZ-->
-=======
->>>>>>> b786c44657f136e3bc24498e805315f2b9820e5c
+
                 <div class="col">
                         <img src="{{asset('/img/profiles/luiz-profile.jpg')}}" width="180" height="180" alt="Luiz Claro profile pic"/>
 
@@ -52,82 +47,16 @@
                     <p><a class="btn btn-secondary" href="/contact/create">Contact &raquo;</a></p>
                 </div><!-- /.col-lg-4 -->
 
-<<<<<<< HEAD
                 <!--ABOUT CEZMI-->
-=======
->>>>>>> b786c44657f136e3bc24498e805315f2b9820e5c
-                <div class="col">
-                        <img src="{{asset('/img/prifiles/undraw_online_groceries_teal.svg')}}" width="140" height="140" alt="Cezmi's Profile pic"/>
 
-<<<<<<< HEAD
+                <div class="col">
+                    <img src="{{asset('/img/profiles/undraw_online_groceries_teal.svg')}}" width="140" height="140" alt="Cezmi's Profile pic"/>
                     <h2 class="text-warning">Cezmi Aktepe</h2>
                     <p>Writing codes, designing web pages and creating projects was my dream job since I graduated from high school. I love dealing with computers and tech.</p>
                     <p>I found a chance to reach my dream job in Canada. Here I am ...</p>
                     <p><a class="btn btn-secondary" href="#/contact">Contact &raquo;</a></p>
-=======
-                    <h2 class="text-warning">Put Your Name Here</h2>
-                    <p>Place Your Personal Info Here</p>
-                    <p><a class="btn btn-secondary" href="#/contact/create">Contact &raquo;</a></p>
->>>>>>> b786c44657f136e3bc24498e805315f2b9820e5c
                 </div><!-- /.col-lg-4 -->
             </div><!-- /.row -->
 
             <hr class="featurette-divider">
-
-            <div class="row featurette">
-                <div class="col-md-7">
-                    <h2 class="featurette-heading">Search recipes and restaurants. <span class="text-highlighted">It's a world-class menu.</span></h2>
-                    <p class="lead">Search our page for incredible options in the most diverse cuisines, filtered by country, ingredients or dietary restrictions.</p>
-                </div>
-                <div class="col-md-5">
-                    <!--                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>-->
-                    <div class ="featurette-image img-fluid mx-auto">
-                        <img width="500" height="500" src="{{asset('/img/SVG/undraw_special_event_orange.svg')}}" alt="A special event" />
-                    </div>
-
-                </div>
-            </div>
-
-            <hr class="featurette-divider">
-
-            <div class="row featurette">
-                <div class="col-md-7 order-md-2">
-                    <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-highlighted">See for yourself.</span></h2>
-                    <p class="lead">You can look up restaurants by area in our interactive map, which provides venue-related info like reviews events and parking.</p>
-                </div>
-                <div class="col-md-5 order-md-1">
-                    <!--                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>-->
-                    <div class ="featurette-image img-fluid mx-auto">
-                        <img width="450" height="450" src="{{asset('/img/SVG/undraw_tourist_map_re_orange.svg')}}" alt="A map of an unmarked neighbourhood" />
-                    </div>
-                </div>
-            </div>
-
-            <hr class="featurette-divider">
-
-            <div class="row featurette">
-                <div class="col-md-7">
-                    <h2 class="featurette-heading">Take care of your diet, <span class="text-highlighted">even while exploring the world.</span></h2>
-                    <p class="lead">View calorie count of our recipes and organize them in weekly meal plans based on your diet and preferences.</p>
-                </div>
-                <div class="col-md-5">
-                    <!--                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>-->
-                    <div class ="featurette-image img-fluid mx-auto">
-                        <img width="450" height="450" src="{{asset('/img/SVG/undraw_diet_orange.svg')}}" alt="Person choosing form different diets" />
-                    </div>
-                </div>
-            </div>
-
-            <hr class="featurette-divider">
-
-            <!-- /END THE FEATURETTES -->
-
-        </div><!-- /.container -->
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.2/js/bootstrap.min.js"></script>
-
-
-@endsection
-@section('footer')
-    @parent
 @endsection

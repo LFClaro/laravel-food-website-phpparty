@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
     <link href="{{ asset('css/carousel.css') }}" rel="stylesheet">
     <link href="{{ asset('css/main.css') }}" rel="stylesheet"/>
+    <script src="{{ asset('js/index.js') }}"></script>
     <script>
         $(function () {
             $(window).on('scroll', function () {
