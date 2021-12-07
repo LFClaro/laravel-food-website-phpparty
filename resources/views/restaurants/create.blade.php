@@ -16,7 +16,8 @@
             <div class="form-group">
                 <label for="model">Address: </label>
                 <input type="text" class="form-control" name="address" id="address"
-                       value="" placeholder="Enter Address">
+                       value="" placeholder="Enter Address - street, city, postal code">
+                <!--TODO need to test to make sure format is in the above way for api -->
             </div>
             <div class="form-group">
                 <label for="">Phone: </label>
