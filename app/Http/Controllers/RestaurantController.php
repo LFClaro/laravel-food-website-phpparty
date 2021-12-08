@@ -41,6 +41,19 @@ class RestaurantController extends Controller
      */
     public function store(Request $request)
     {
+//        if($request->validate())
+        /*
+         * public function store(Request $request)
+{
+    $validated = $request->validate([
+        'title' => 'required|unique:posts|max:255',
+        'body' => 'required',
+    ]);
+
+    // The blog post is valid...
+}
+
+         */
         Restaurant::create($request->all());
         return redirect('restaurants');
     }

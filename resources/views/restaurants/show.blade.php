@@ -68,7 +68,7 @@ $currentTime = time(); // get current time, maybe will use but will have to form
         {{--<a href="{{ url('restaurants') }}" id="btn_back" class="btn btn-success float-right">Back</a>--}}
         <div>
             <h4>Add Review </h4>
-            <form action="{{ url('recipereview') }}" method="post">
+            <form action="{{ url('review') }}" method="post">
                 @csrf
                 <div class="form-group">
                     <!--TODO: Work on it-->
@@ -77,7 +77,7 @@ $currentTime = time(); // get current time, maybe will use but will have to form
                 </div>
                 <div class="form-group">
                     <!--TODO: Work on it-->
-                    <input type="hidden" class="form-control" name="recipe_id" id="recipeid"
+                    <input type="hidden" class="form-control" name="restaurant_id" id="restaurantid"
                            value="{{$restaurants->id}}" />
                 </div>
                 <div class="form-group">
@@ -88,7 +88,7 @@ $currentTime = time(); // get current time, maybe will use but will have to form
                 <br />
                 <input type="submit" name="addReview"
                        class="btn btn-success float-right" value="Comment" />
-                <a href="{{ url('recipereview') }}" id="btn_back" class="btn btn-success float-left">Back</a>
+                <a href="{{ url('review') }}" id="btn_back" class="btn btn-success float-left">Back</a>
             </form>
         </div>
     </div>
