@@ -48,6 +48,13 @@
                     {{ __('Log in') }}
                 </x-button>
             </div>
+            @if (Route::has('register'))
+                    <div class="d-flex justify-content-center mt-4">
+                        <x-button class="ml-3">
+                            <a href="{{ route('register') }}" class="text-light text-decoration-none">Register</a>
+                        </x-button>
+                    </div>
+            @endif
         </form>
     </x-auth-card>
 </x-guest-layout>
