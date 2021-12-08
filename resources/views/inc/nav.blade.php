@@ -41,7 +41,11 @@
                 </form>
             </li>
 
+        </ul>
+        <ul class="navbar-nav ml-right">
             <li class="nav-item"><a href="/login" class="btn btn-secondary nav-link  ms-2 btn-sm">Log In</a></li>
+            <li class="nav-item"><a href="{{route('register')}}" class="btn btn-secondary nav-link  ms-2 btn-sm">Register</a></li>
+            <li class="nav-item"><h4 class="text-white-50">{{$user = Auth::user()->first_name}}</h4></li>
         </ul>
     </div>
 @show
