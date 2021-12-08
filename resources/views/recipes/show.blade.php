@@ -29,21 +29,13 @@
             <form action="{{ url('recipereview') }}" method="post">
                 @csrf
                 <div class="form-group">
-                {{--<label for="userid">User Id: </label>
-                <input type="text" class="form-control" name="user_id" id="userid"
-                       placeholder="Enter User Id" />--}}
-
                 <!--TODO: Work on it-->
                     <input type="hidden" class="form-control" name="user_id" id="userid"
                            value="{{$id = Auth::id()}}" />
                 </div>
                 <div class="form-group">
-                {{--<label for="recipeid">Recipe Id: </label>
-                <input type="text" class="form-control" name="recipe_id" id="recipeid"
-                          placeholder="Enter id" />--}}
-
                 <!--TODO: Work on it-->
-                    <input type="hidden" class="form-control" name="user_id" id="userid"
+                    <input type="hidden" class="form-control" name="recipe_id" id="recipeid"
                            value="{{$recipes->id}}" />
                 </div>
                 <div class="form-group">

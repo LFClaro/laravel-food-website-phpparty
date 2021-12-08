@@ -65,8 +65,34 @@ $currentTime = time(); // get current time, maybe will use but will have to form
         <p>Humidity: <?php echo $data->main->humidity; ?> %</p>
         <p>Wind: <?php echo $data->wind->speed; ?> km/h</p>
         <br><br>
-        <a href="{{ url('restaurants') }}" id="btn_back" class="btn btn-success float-right">Back</a>
+        {{--<a href="{{ url('restaurants') }}" id="btn_back" class="btn btn-success float-right">Back</a>--}}
+        <div>
+            <h4>Add Review </h4>
+            <form action="{{ url('recipereview') }}" method="post">
+                @csrf
+                <div class="form-group">
+                    <!--TODO: Work on it-->
+                    <input type="hidden" class="form-control" name="user_id" id="userid"
+                           value="{{$id = Auth::id()}}" />
+                </div>
+                <div class="form-group">
+                    <!--TODO: Work on it-->
+                    <input type="hidden" class="form-control" name="recipe_id" id="recipeid"
+                           value="{{$restaurants->id}}" />
+                </div>
+                <div class="form-group">
+                    <label for="comment">Comment: </label>
+                    <textarea type="text" class="form-control" name="comment" id="comment"
+                              placeholder="Enter Comments"></textarea>
+                </div>
+                <br />
+                <input type="submit" name="addReview"
+                       class="btn btn-success float-right" value="Comment" />
+                <a href="{{ url('recipereview') }}" id="btn_back" class="btn btn-success float-left">Back</a>
+            </form>
+        </div>
     </div>
+
     <!--TODO testing below -->
 {{--    <p>{{$str_arr[1]}}</p>--}}
 {{--    <p><?php var_dump($data); ?></p>--}}

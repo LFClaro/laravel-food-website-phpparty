@@ -17,7 +17,7 @@
 
                 <!--TODO: Work on it-->
                 <input type="hidden" class="form-control" name="user_id" id="userid"
-                       value="{{$user->id}}" />
+                       value="{{$id = Auth::id()}}" />
             </div>
             <div class="form-group">
                 {{--<label for="recipeid">Recipe Id: </label>
@@ -25,8 +25,8 @@
                           placeholder="Enter id" />--}}
 
                 <!--TODO: Work on it-->
-                <input type="hidden" class="form-control" name="user_id" id="userid"
-                       value="{{$recipe->id}}" />
+                {{--<input type="hidden" class="form-control" name="user_id" id="userid"
+                       value="{{$recipes->id}}" />--}}
             </div>
             <div class="form-group">
                 <label for="comment">Comment: </label>
