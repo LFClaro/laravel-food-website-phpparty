@@ -29,17 +29,17 @@
 {{--                    </div>--}}
 {{--                </div>--}}
 
-{{--                <form action="{{url('/search')}}" method="get">--}}
-{{--                    <input type="search" id="src" name="src">--}}
-{{--<!--the category of search item -->--}}
-{{--                    <select name="src_category">--}}
-{{--                        <option value="restaurant">Restaurant</option>--}}
-{{--                        <option value="recipes">Recipe</option>--}}
-{{--                        <option value="countries">Country</option>--}}
-{{--                    </select>--}}
-{{--                    <input type="image" src="{{asset('/img/search_icon.png')}}" width="22" height="23">--}}
-{{--                </form>--}}
-{{--            </li>--}}
+                <form action="{{url('/search')}}" method="get">
+                    <input type="search" id="src" name="src">
+<!--the category of search item -->
+                    <select name="src_category">
+                        <option value="restaurant">Restaurant</option>
+                        <option value="recipes">Recipe</option>
+                        <option value="countries">Country</option>
+                    </select>
+                    <input type="image" src="{{asset('/img/search_icon.png')}}" width="22" height="23">
+                </form>
+            </li>
 
             <li class="nav-item"><a href="/login" class="btn btn-secondary nav-link  ms-2 btn-sm">Log In</a></li>
         </ul>
