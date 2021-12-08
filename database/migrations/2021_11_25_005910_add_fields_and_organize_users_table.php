@@ -22,6 +22,9 @@ class AddFieldsAndOrganizeUsersTable extends Migration
             $table->after('password', function ($table) {
                 $table->boolean('promotions')->default(0);
             });
+            $table->after( 'id', function ($table){
+                $table->string('role',10);
+            });
         });
     }
 
