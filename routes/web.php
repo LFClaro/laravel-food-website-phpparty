@@ -42,7 +42,7 @@ Route::resource('/review',RestaurantReviewController::class);
 Route::resource('/contact',ContactController::class);
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view('home');
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
