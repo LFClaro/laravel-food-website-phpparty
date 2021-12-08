@@ -24,31 +24,37 @@
         @endforeach
         <br /><br />
 
-        <!--TODO: need to link with user id to add comments -->
-{{--    </div>--}}
-{{--    <div class="container align-items-center justify-content-center">--}}
-{{--        <h1>Add Review </h1>--}}
-{{--        <form action="{{ url('recipereview') }}" method="post">--}}
-{{--            @csrf--}}
-{{--            <div class="form-group">                --}}
-{{--                <input type="hidden" class="form-control" name="userid" id="userid"--}}
-{{--                       value="{{}}" />--}}
-{{--            </div>--}}
-{{--            <div class="form-group">--}}
-{{--                <input type="hidden" class="form-control" name="recipeid" id="recipeid"--}}
-{{--                       placeholder="Enter description"  value="{{$recipes->id}}"/>--}}
-{{--            </div>--}}
-{{--            <div class="form-group">--}}
-{{--                <label for="comment">Comment: </label>--}}
-{{--                <textarea type="text" class="form-control" name="comment" id="comment"--}}
-{{--                          placeholder="Enter comments"></textarea>--}}
-{{--            </div>--}}
-{{--            <br>--}}
-{{--            <input type="submit" name="addRecipeReview"--}}
-{{--                   class="btn btn-success float-right" id="btn-submit" value="Comment" />--}}
+        <div>
+            <h4>Add Review </h4>
+            <form action="{{ url('recipereview') }}" method="post">
+                @csrf
+                <div class="form-group">
+                {{--<label for="userid">User Id: </label>
+                <input type="text" class="form-control" name="user_id" id="userid"
+                       placeholder="Enter User Id" />--}}
 
+                <!--TODO: Work on it-->
+                    <input type="hidden" class="form-control" name="user_id" id="userid"
+                           value="{{$id = Auth::id()}}" />
+                </div>
+                <div class="form-group">
+                {{--<label for="recipeid">Recipe Id: </label>
+                <input type="text" class="form-control" name="recipe_id" id="recipeid"
+                          placeholder="Enter id" />--}}
 
-{{--            <a href="{{ url('recipes') }}" id="btn_back" class="btn btn-success float-right">Back</a>--}}
-{{--        </form>--}}
-{{--    </div>--}}
+                <!--TODO: Work on it-->
+                    <input type="hidden" class="form-control" name="user_id" id="userid"
+                           value="{{$recipes->id}}" />
+                </div>
+                <div class="form-group">
+                    <label for="comment">Comment: </label>
+                    <textarea type="text" class="form-control" name="comment" id="comment"
+                              placeholder="Enter Comments"></textarea>
+                </div>
+                <br />
+                <input type="submit" name="addReview"
+                       class="btn btn-success float-right" value="Comment" />
+                <a href="{{ url('recipereview') }}" id="btn_back" class="btn btn-success float-left">Back</a>
+            </form>
+        </div>
 @endsection
