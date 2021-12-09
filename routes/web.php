@@ -6,7 +6,9 @@ use App\Http\Controllers\RecipeReviewController;
 use App\Http\Controllers\RecipeController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\SearchController;
+use App\Mail\WelcomeMail;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Mail;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,3 +48,9 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
+
+// route for emails
+Route::get('/email', function(){
+    //Mail::to('')->send(new WelcomeMail()); // get user email here
+    return new WelcomeMail();
+});
