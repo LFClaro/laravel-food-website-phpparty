@@ -42,7 +42,7 @@ class ContactController extends Controller
     {
         //
         Contact::create($request->all());
-        return redirect('contact');
+        return redirect('email');
     }
 
     /**
