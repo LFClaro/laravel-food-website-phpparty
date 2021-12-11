@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Contact;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\WelcomeMail;
 
 class ContactController extends Controller
 {
@@ -42,7 +45,11 @@ class ContactController extends Controller
     {
         //
         Contact::create($request->all());
-        return redirect('email');
+        //$request->get("email");
+        //Mail::to('tim.marshall.burns95@gmail.com')->send(new WelcomeMail());
+        $user = Auth::user();
+        Mail::to($user->email)->send(new WelcomeMail());
+        return redirect('home');
     }
 
     /**

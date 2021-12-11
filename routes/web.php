@@ -51,6 +51,6 @@ require __DIR__.'/auth.php';
 
 // route for emails
 Route::get('/email', function(){
-    Mail::to('tim.marshall.burns95@gmail.com')->send(new WelcomeMail()); // get user email here
+    //Mail::to('tim.marshall.burns95@gmail.com')->send(new WelcomeMail()); // get user email here
     return new WelcomeMail();
 });
