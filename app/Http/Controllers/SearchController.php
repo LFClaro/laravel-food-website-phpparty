@@ -28,12 +28,12 @@ class SearchController extends Controller
                 $passValue = DB::table("recipes")->where('name','LIKE','%'.$search_text.'%')->first();
                 if ($passValue==null) return View("search.searchResult_error");
                 $recReview = DB::table("recipe_reviews")->where('recipe_id',"=",$passValue->id)->get();
-                return View('search.searchResult_recipe',['recipes'=>$passValue, 'reviews'=>$recReview]);
+                return View('recipes.show',['recipes'=>$passValue, 'reviews'=>$recReview]);
             case "restaurant":
                 $passValue = DB::table("restaurants")->where('restaurants.name','LIKE','%'.$search_text.'%')->first();
                 if ($passValue==null) return View("search.searchResult_error");
                 $resReview = DB::table("restaurant_reviews")->where('restaurant_id',"=",$passValue->id)->get();
-                return View('search.searchResult_restaurant',['restaurant'=>$passValue,"reviews"=>$resReview]);
+                return View('restaurants.show',['restaurants'=>$passValue,"reviews"=>$resReview]);
             default:
                 return View("search.searchResult_error");
         }
