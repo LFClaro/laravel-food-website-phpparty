@@ -47,8 +47,9 @@ class ContactController extends Controller
         Contact::create($request->all());
         //$request->get("email");
         //Mail::to('tim.marshall.burns95@gmail.com')->send(new WelcomeMail());
-        $user = Auth::user();
-        Mail::to($user->email)->send(new WelcomeMail());
+        //$user = Auth::user();
+        //Mail::to($user->email)->send(new WelcomeMail());
+        Mail::to($request->email)->send(new WelcomeMail()); //TODO works
         return redirect('home');
     }
 

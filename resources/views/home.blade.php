@@ -1,3 +1,6 @@
+<?php
+
+?>
 @extends('layouts.main')
 
 @section( 'title')
@@ -77,7 +80,14 @@
                     <img src="{{asset('/img/SVG/undraw_cooking_teal.svg')}}" width="140" height="140" alt="Two people enjoying food together"/>
                 </svg>
 
-                <h2>Recipes</h2>
+                <h2>Recipes
+{{--                    <?php $user = Auth::user()--}}
+{{--//                    echo var_dump($user)--}}
+
+
+{{--                    ?>--}}
+{{--                    {{var_dump($user->email)}}--}}
+                </h2>
                 <p>Here you can have access to recipes from all over the world. We have a database with numerous recipes from more than 80 countries for your taste.</p>
                 <p><a class="btn btn-secondary" href="/recipes">View Recipes &raquo;</a></p>
             </div><!-- /.col-lg-4 -->

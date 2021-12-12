@@ -10,7 +10,6 @@
 @section('content')
 
 
-
     <!-- TODO: need to create contact table or someplace to send the form to
     TODO - or look up how she does the emails-->
 
@@ -19,7 +18,14 @@
 
         <!-- Three columns of text below the carousel -->
         <div class="row">
-            <h1 class="featurette-heading text-light text-center">Contact PHParty Below!</h1>
+            <h1 class="featurette-heading text-light text-center">Contact PHParty Below!
+                <?php $user = Auth::user()
+                //echo var_dump($user);
+                //echo "test";
+                ?>
+                {{var_dump($user)}}
+            </h1>
+
 
 
             <div class="col">
