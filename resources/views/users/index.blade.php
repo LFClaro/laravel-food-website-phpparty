@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section( 'title')
-    Recipes
+    Users
 @endsection
 
 @section(('header'))
@@ -31,7 +31,7 @@
                     <td>{{ $u->role }}</td>
                     <td>
                         @if($u->role != 'admin')
-                        <form method="get" action="#">
+                        <form method="get" action="{{ url('users/' . $u->id . '/edit')}}">
                             @csrf
                             <input type="submit" class="btn btn-primary me-2" value="Update Role" />
                         </form>

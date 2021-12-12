@@ -6,11 +6,8 @@ use App\Http\Controllers\RecipeReviewController;
 use App\Http\Controllers\RecipeController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\SearchController;
-<<<<<<< HEAD
 use App\Http\Controllers\UsersController;
-=======
 use App\Mail\WelcomeMail;
->>>>>>> fb30c61668577988cbab31781443d6cb0f101656
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Mail;
 
