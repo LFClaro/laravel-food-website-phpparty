@@ -1,5 +1,5 @@
 @section('footer')
-    <div class="footer-basic fixed-bottom">
+    <div class="footer-basic ">
         <footer>
             <div class="social"><a href="https://www.instagram.com" target="_blank"><i class="icon ion-social-instagram"></i></a>
                 <a href="https://www.snapchat.com" target="_blank"><i class="icon ion-social-snapchat"></i></a>
