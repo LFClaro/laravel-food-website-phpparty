@@ -1,24 +1,29 @@
-<div class="box box-info padding-1">
-    <div class="box-body">
-        
-        <div class="form-group">
-            {{ Form::label('comment') }}
-            {{ Form::text('comment', $restaurantReview->comment, ['class' => 'form-control' . ($errors->has('comment') ? ' is-invalid' : ''), 'placeholder' => 'Comment']) }}
-            {!! $errors->first('comment', '<div class="invalid-feedback">:message</p>') !!}
-        </div>
-        <div class="form-group">
-            {{ Form::label('restaurant_id') }}
-            {{ Form::text('restaurant_id', $restaurantReview->restaurant_id, ['class' => 'form-control' . ($errors->has('restaurant_id') ? ' is-invalid' : ''), 'placeholder' => 'Restaurant Id']) }}
-            {!! $errors->first('restaurant_id', '<div class="invalid-feedback">:message</p>') !!}
-        </div>
-        <div class="form-group">
-            {{ Form::label('user_id') }}
-            {{ Form::text('user_id', $restaurantReview->user_id, ['class' => 'form-control' . ($errors->has('user_id') ? ' is-invalid' : ''), 'placeholder' => 'User Id']) }}
-            {!! $errors->first('user_id', '<div class="invalid-feedback">:message</p>') !!}
-        </div>
+@extends('layouts.main')
 
+@section( 'title')
+    Add Restaurant Review
+@endsection
+
+@section('content')
+    <div class="container align-items-center justify-content-center">
+        <form action="{{ url('review') }}" method="post">
+            @csrf
+            <div class="form-group">
+                <label for="make">Review: </label>
+                <input type="text" class="form-control" name="comment" id="comment" value=""
+                       placeholder="Enter Review">
+            <br />
+                <input type="hidden" name = "restaurant_id" value="{{$restaurants->id}}">
+            <div class="row">
+                <div class="col">
+                    <a href="{{ url('restaurants') }}" id="btn_back" class="btn btn-danger text-light float-start">Back</a>
+                </div>
+                <div class="col">
+                    <button type="submit" name="addReview" class="btn btn-success text-light float-end" id="btn-submit">
+                        Add Restaurant
+                    </button>
+                </div>
+            </div>
+        </form>
     </div>
-    <div class="box-footer mt20">
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </div>
-</div>
+@endsection
