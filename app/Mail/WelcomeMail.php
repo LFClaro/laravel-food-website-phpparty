@@ -28,10 +28,7 @@ class WelcomeMail extends Mailable
      */
     public function build()
     {
-        $address = "tim@humber.ca";
-        $name = "tim";
-        return $this->markdown('emails.welcome')
-            ->from($address, $name)
-            ->cc($address, $name);
+
+        return $this->markdown('emails.welcome');
     }
 }
