@@ -5,28 +5,28 @@
         </x-slot>
 
         <!-- Session Status -->
-        <x-auth-session-status class="mb-4" :status="session('status')" />
+        <x-auth-session-status class="mb-4" :status="session('status')"/>
 
         <!-- Validation Errors -->
-        <x-auth-validation-errors class="mb-4" :errors="$errors" />
+        <x-auth-validation-errors class="mb-4" :errors="$errors"/>
 
         <form method="POST" action="{{ route('login') }}">
-            @csrf
-            <!-- Email Address -->
+        @csrf
+        <!-- Email Address -->
             <div>
-                <x-label for="email" :value="__('Email')" />
+                <x-label for="email" :value="__('Email')"/>
 
-                <x-input id="email" class="" type="email" name="email" :value="old('email')" required autofocus />
+                <x-input id="email" class="" type="email" name="email" :value="old('email')" required autofocus/>
             </div>
 
             <!-- Password -->
             <div class="mt-4">
-                <x-label for="password" :value="__('Password')" />
+                <x-label for="password" :value="__('Password')"/>
 
                 <x-input id="password" class=""
-                                type="password"
-                                name="password"
-                                required autocomplete="current-password" />
+                         type="password"
+                         name="password"
+                         required autocomplete="current-password"/>
             </div>
 
             <!-- Remember Me -->
@@ -37,23 +37,23 @@
                 </label>
             </div>
 
-            <div class="d-flex justify-content-end mt-4">
+            <div class="d-flex justify-content-center mt-4 flex-column">
+                <x-button class="p-2">
+                    {{ __('Log in') }}
+                </x-button>
                 @if (Route::has('password.request'))
-                    <a class="text-muted" href="{{ route('password.request') }}" style="margin-right: 15px; margin-top: 15px;">
+                    <a class="text-muted p-2 align-self-center" href="{{ route('password.request') }}"
+                       style="margin-top: 15px;">
                         {{ __('Forgot your password?') }}
                     </a>
                 @endif
-
-                <x-button class="ml-3">
-                    {{ __('Log in') }}
-                </x-button>
             </div>
             @if (Route::has('register'))
-                    <div class="d-flex justify-content-center mt-4">
-                        <x-button class="ml-3">
-                            <a href="{{ route('register') }}" class="text-light text-decoration-none">Register</a>
-                        </x-button>
-                    </div>
+                <div class="d-flex justify-content-center mt-4 flex-column">
+                    <x-button class="p-2">
+                        <a href="{{ route('register') }}" class="text-light text-decoration-none">Register</a>
+                    </x-button>
+                </div>
             @endif
         </form>
     </x-auth-card>
