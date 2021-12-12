@@ -1,6 +1,3 @@
-@extends('layouts.main')
-
-
 @component('mail::message')
 # Thanks for messaging us!
 
