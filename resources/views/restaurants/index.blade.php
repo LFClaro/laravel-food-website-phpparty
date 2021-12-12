@@ -20,7 +20,9 @@
                 <th>Comments</th>
                 <th>Rating</th>
                 <th>Country</th>
-                <th colspan="2">Options</th>
+                {{--@if(\Illuminate\Support\Facades\Auth::user()->role != null)--}}
+                    <th colspan="2">Options</th>
+                {{--@endif--}}
             </tr>
             </thead>
             <tbody>

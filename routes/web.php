@@ -6,6 +6,7 @@ use App\Http\Controllers\RecipeReviewController;
 use App\Http\Controllers\RecipeController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\SearchController;
+use App\Http\Controllers\UsersController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -35,11 +36,16 @@ Route::get('/restaurants/map', function () { return view('restaurants.map'); });
 
 Route::get('/search',[SearchController::class,'index']);
 
+Route::get('users', 'UsersController@index')->name('users.index');
+
+/*Route::get('users', function () { return view('users.index'); });*/
+
 Route::resource('/restaurants', RestaurantController::class);
 Route::resource('/recipes', RecipeController::class);
 Route::resource('/recipereview', RecipeReviewController::class);
 Route::resource('/review',RestaurantReviewController::class);
 Route::resource('/contact',ContactController::class);
+Route::resource('/users', UsersController::class);
 
 Route::get('/dashboard', function () {
     return view('home');

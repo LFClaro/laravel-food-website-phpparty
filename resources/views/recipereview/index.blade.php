@@ -22,7 +22,7 @@
             </thead>
             <tbody>
             @foreach($recipeReview as $rev)
-                <tr onclick="window.location='{{ url('recipereview', $rev->id) }}';">
+                <tr>
                     <td>{{ $rev->user_id }}</td>
                     <td>{{ $rev->recipe_id }}</td>
                     <td>{{ $rev->comment }}</td>

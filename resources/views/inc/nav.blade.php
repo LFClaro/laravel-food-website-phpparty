@@ -40,28 +40,20 @@
                     <input type="image" src="{{asset('/img/search_icon.png')}}" width="22" height="23">
                 </form>
             </li>
-<<<<<<< HEAD
-
 
         </ul>
-        <ul class="navbar-nav ml-right">
-            <li class="nav-item"><a href="/login" class="btn btn-secondary nav-link  ms-2 btn-sm">Log In</a></li>
-            <li class="nav-item"><a href="{{route('register')}}" class="btn btn-secondary nav-link  ms-2 btn-sm">Register</a></li>
-            <li class="nav-item"><h4 class="text-white-50">{{$user = Auth::user()->first_name}}</h4></li>
-=======
+        <ul class="navbar-nav ml-auto">
             @if (Route::has('login'))
-{{--                @if (Auth::user->hasRole('user'))--}}
-                    @auth
-                        <li class="nav-item"><p class="text-light">Hello, {{\Illuminate\Support\Facades\Auth::user()->name}}</p></li>
-                        <li class="nav-item"><a href="{{ \Illuminate\Support\Facades\Auth::logout() }}" class="btn btn-secondary nav-link  ms-2 btn-sm">Log Out</a></li>
-                    @else
+                @auth
+                    <li class="nav-item"><p class="text-light">Hello, {{Auth::user()->first_name}}</p></li>
+                    <li class="nav-item"><a href="{{ \Illuminate\Support\Facades\Auth::logout() }}" class="btn btn-secondary nav-link  ms-2 btn-sm">Log Out</a></li>
+                 @else
                         <li class="nav-item"><a href="/login" class="btn btn-secondary nav-link  ms-2 btn-sm">Log In</a></li>
                         @if (Route::has('register'))
                             <li class="nav-item"><a href="{{ route('register') }}" class="btn btn-secondary nav-link  ms-2 btn-sm">Register</a></li>
                         @endif
                     @endauth
             @endif
->>>>>>> 52aa8e1ab1710c140384c2c028e79b8c4c15422a
         </ul>
     </div>
 @show

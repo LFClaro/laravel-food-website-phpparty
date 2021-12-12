@@ -84,6 +84,6 @@ class RecipeReviewController extends Controller
     public function destroy(RecipeReview $recipeReview)
     {
         $recipeReview->delete();
-        return redirect('recipereview');
+        return redirect('/recipereview');
     }
 }

@@ -23,7 +23,7 @@ class AddFieldsAndOrganizeUsersTable extends Migration
                 $table->boolean('promotions')->default(0);
             });
             $table->after( 'id', function ($table){
-                $table->string('role',10);
+                $table->string('role',10)->default('guest');
             });
         });
     }

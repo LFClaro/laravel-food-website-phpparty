@@ -31,7 +31,7 @@
                 <div class="form-group">
                 <!--TODO: Work on it-->
                     <input type="hidden" class="form-control" name="user_id" id="userid"
-                           value="{{$id = Auth::id()}}" />
+                           value="{{Auth::id()}}" />
                 </div>
                 <div class="form-group">
                 <!--TODO: Work on it-->
