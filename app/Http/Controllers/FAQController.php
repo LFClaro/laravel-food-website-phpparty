@@ -10,7 +10,8 @@ class FAQController extends Controller
 
     public function index()
     {
-        //
+        $faqs = FAQ::all();
+        return view('FAQs.index',compact('faqs'));
     }
 
     public function create()

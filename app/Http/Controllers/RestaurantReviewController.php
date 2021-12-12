@@ -10,7 +10,6 @@ class RestaurantReviewController extends Controller
     public function index()
     {
         $restaurantReviews = RestaurantReview::all();
-
         return view('restaurantreview.index', compact('restaurantReviews'));
     }
 
