@@ -44,14 +44,14 @@
         <ul class="navbar-nav ml-auto">
             @if (Route::has('login'))
                 @auth
-                    <li class="nav-item"><p class="text-light">Hello, {{Auth::user()->first_name}}</p></li>
-                    <li class="nav-item"><a href="{{Auth::logout() }}" class="btn btn-secondary nav-link  ms-2 btn-sm">Log Out</a></li>
+                    <li class="nav-item"><p class="nav-link">Hello, {{ \Illuminate\Support\Facades\Auth::user()->first_name }}</p></li>
+                    <li class="nav-item"><a href="{{ \Illuminate\Support\Facades\Auth::logout() }}" class="btn btn-secondary nav-link  ms-2 btn-sm">Log Out</a></li>
+                @else
+                    <li class="nav-item"><a href="/login" class="btn btn-secondary nav-link  ms-2 btn-sm">Log In</a></li>
+                    @if (Route::has('register'))
+                        <li class="nav-item"><a href="{{ route('register') }}" class="btn btn-secondary nav-link  ms-2 btn-sm">Register</a></li>
+                    @endif
                 @endauth
-            @else
-                <li class="nav-item"><a href="/login" class="btn btn-secondary nav-link  ms-2 btn-sm">Log In</a></li>
-                @if (Route::has('register'))
-                    <li class="nav-item"><a href="{{ route('register') }}" class="btn btn-secondary nav-link  ms-2 btn-sm">Register</a></li>
-                @endif
             @endif
         </ul>
     </div>

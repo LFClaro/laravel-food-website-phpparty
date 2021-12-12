@@ -38,7 +38,7 @@
                         @endif
                     </td>
                     <td>
-                        <form method="post" action="#">
+                        <form method="post" action="{{ url('users', $u->id) }}">
                             @csrf
                             @method('DELETE')
                             <input type="submit" class="btn btn-danger me-2" value="Delete" />
