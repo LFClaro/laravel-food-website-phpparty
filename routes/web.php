@@ -40,8 +40,6 @@ Route::get('/search',[SearchController::class,'index']);
 
 Route::get('users', 'UsersController@index')->name('users.index');
 
-/*Route::get('users', function () { return view('users.index'); });*/
-
 Route::resource('/restaurants', RestaurantController::class);
 Route::resource('/recipes', RecipeController::class);
 Route::resource('/recipereview', RecipeReviewController::class);
@@ -49,14 +47,16 @@ Route::resource('/review',RestaurantReviewController::class);
 Route::resource('/contact',ContactController::class);
 Route::resource('/users', UsersController::class);
 
-Route::get('/dashboard', function () {
-    return view('home');
-})->middleware(['auth'])->name('dashboard');
-
-require __DIR__.'/auth.php';
 
 // route for emails
 Route::get('/email', function(){
     //Mail::to('tim.marshall.burns95@gmail.com')->send(new WelcomeMail()); // get user email here
     return new WelcomeMail();
 });
+
+
+Route::get('/dashboard', function () {
+    return view('home');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__.'/auth.php';
