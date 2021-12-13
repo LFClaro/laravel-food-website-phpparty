@@ -93,7 +93,14 @@ class ContactController extends Controller
     public function update(Request $request, Contact $contact)
     {
         //
-        $contact->update($request->all());
+        $validated = $request->validate([
+            'name' => 'required|min:2',
+            'email' => 'required|email',
+            'subject' => 'required',
+            'message' => 'required',
+        ]);
+        //$contact->update($request->all());
+        $contact->update($validated);
         return redirect('contact');
     }
 

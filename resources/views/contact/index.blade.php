@@ -1,3 +1,9 @@
+<?php
+use Illuminate\Support\Facades\Auth;
+$user = Auth::user();
+
+?>
+
 @extends('layouts.main')
 
 @section( 'title')
@@ -11,6 +17,11 @@
     <div class="container align-items-center justify-content-center">
         <h1 class="text-center">Messages</h1>
         <p class="text-center"><a href="{{ url("contact/create") }}" class="btn btn-success text-light">Send us a message</a></p>
+
+        @if (Route::has('login'))
+            @auth
+                @if($user->role == "admin")
+
         <table class="table table-striped table-light text-dark table-hover">
             <thead class="text-center text-black text-capitalize">
             <tr>
@@ -18,7 +29,7 @@
                 <th>Email</th>
                 <th>Subject</th>
                 <th>Message</th>
-                <th colspan="2">Options</th>
+{{--                <th colspan="2">Options</th>--}}
             </tr>
             </thead>
             <tbody>
@@ -28,23 +39,28 @@
                     <td>{{ $c->email }}</td>
                     <td>{{ $c->subject }}</td>
                     <td>{{ $c->message }}</td>
-                    <td>
-                        <form method="get" action="{{ url('contact/' . $c->id . '/edit')}}">
-                            @csrf
-                            <input type="submit" class="btn btn-primary me-2" value="Update" />
-                        </form>
-                    </td>
-                    <td>
-                        <form method="post" action="{{ url('contact/' . $c->id)}}">
-                            @csrf
-                            @method('DELETE')
-                            <input type="submit" class="btn btn-danger me-2" value="Delete" />
-                        </form>
-                    </td>
+{{--                    <td>--}}
+{{--                        <form method="get" action="{{ url('contact/' . $c->id . '/edit')}}">--}}
+{{--                            @csrf--}}
+{{--                            <input type="submit" class="btn btn-primary me-2" value="Update" />--}}
+{{--                        </form>--}}
+{{--                    </td>--}}
+{{--                    <td>--}}
+{{--                        <form method="post" action="{{ url('contact/' . $c->id)}}">--}}
+{{--                            @csrf--}}
+{{--                            @method('DELETE')--}}
+{{--                            <input type="submit" class="btn btn-danger me-2" value="Delete" />--}}
+{{--                        </form>--}}
+{{--                    </td>--}}
                 </tr>
             @endforeach
             </tbody>
         </table>
+
+
+                @endif
+            @endauth
+        @endif
         <br />
     </div>
 @endsection
