@@ -7,6 +7,7 @@ use App\Http\Controllers\RecipeController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\UsersController;
+use App\Http\Controllers\FAQController;
 use App\Mail\WelcomeMail;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Mail;
@@ -53,6 +54,7 @@ Route::resource('/recipereview', RecipeReviewController::class);
 Route::resource('/review',RestaurantReviewController::class);
 Route::resource('/contact',ContactController::class);
 Route::resource('/users', UsersController::class);
+Route::resource("/faqs",FAQController::class);
 
 
 // route for emails
