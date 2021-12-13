@@ -7,9 +7,21 @@ use App\Models\RecipeReview;
 use App\Models\Restaurant;
 use App\Models\RestaurantReview;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class RestaurantController extends Controller
 {
+    protected $user;
+
+    public function __construct()
+    {
+        $this->middleware(function ($request, $next) {
+            $this->user= Auth::user();
+
+            return $next($request);
+        });
+    }
+
     /**
      * Display a listing of the resource.
      *
