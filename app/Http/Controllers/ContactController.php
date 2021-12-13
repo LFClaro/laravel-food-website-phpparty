@@ -44,11 +44,17 @@ class ContactController extends Controller
     public function store(Request $request)
     {
         //
-        Contact::create($request->all());
-        //$request->get("email");
-        //Mail::to('tim.marshall.burns95@gmail.com')->send(new WelcomeMail());
-//        $user = Auth::user();
-        //Mail::to($user->email)->send(new WelcomeMail());
+        //Contact::create($request->all());
+        $validated = $request->validate([
+            'name' => 'required|min:2',
+            'email' => 'required|email',
+            'subject' => 'required',
+            'message' => 'required',
+        ]);
+
+
+        Contact::create($validated);
+        // below is for sencing email
         Mail::to($request->email)->send(new WelcomeMail()); //
         return redirect('home');
     }

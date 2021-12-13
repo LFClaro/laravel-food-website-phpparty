@@ -52,7 +52,7 @@ Route::resource('/restaurants', RestaurantController::class);
 Route::resource('/recipes', RecipeController::class);
 Route::resource('/recipereview', RecipeReviewController::class);
 Route::resource('/review',RestaurantReviewController::class);
-Route::resource('/contact',ContactController::class);
+Route::resource('/contact',ContactController::class)->middleware((['auth']));
 Route::resource('/users', UsersController::class);
 Route::resource("/faqs",FAQController::class);
 

@@ -19,36 +19,34 @@
         <!-- Three columns of text below the carousel -->
         <div class="row">
             <h1 class="featurette-heading text-light text-center">Contact PHParty Below!
-{{--                {{var_dump($userInfo)}}--}}
-{{--                {{\Illuminate\Support\Facades\Session::get('user')}}--}}
-{{--                {{var_dump($user)}}--}}
-{{--                <?php--}}
-{{--//                $tester = $_SESSION['test'];--}}
-{{--//                echo $tester--}}
-{{--                echo $_SESSION["test"];--}}
-{{--                echo $_ENV["Tim"]--}}
-
-{{--                echo "test"--}}
-{{--                ?>--}}
-{{--                {{$_ENV["Tim"]}}--}}
-            <? echo "testing" ?>
             </h1>
 
 
 
             <div class="col">
-                <h2 class="text-warning featurette-heading">Let's talk about everything!<? echo "testing" ?></h2>
+                <h2 class="text-warning featurette-heading">Let's talk about everything!</h2>
                 <p class="lead">We would love to hear from you, tells us about you like, your concerns, your questions or just whats your favourite meal or restaurant!</p>
 
                 <img src="{{asset('/img/SVG/convo.svg')}}" width="360" height="360" alt="Two people enjoying food together"/>
             </div><!-- /.col-lg-4 -->
+
+            <!--Eroors dont seem to be displaying but validation check is working -->
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li class="lead text-danger">Error: {{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
 
             <div class="col">
                 <h2 class="text-light featurette-heading">Thanks in advance!</h2> <!-- TODO use get or post method to send data -->
                 <form class="" method="" id="contactForm" name="contactForm">
                     <div>
                         <div class="form-group">
-                            <input type="text" class="form-control" name="name" id="name" placeholder="Your name" required>
+                            <input type="text" class="form-control" name="name" id="name" placeholder="Your name">
                         </div>
                     </div>
                     <div class="">

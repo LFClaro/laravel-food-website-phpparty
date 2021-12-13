@@ -15,6 +15,15 @@
         <div class="row">
             <h1 class="featurette-heading text-light text-center">Contact PHParty Below!</h1>
 
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li class="lead text-danger">Error: {{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
 
             <div class="col">
                 <h2 class="text-warning featurette-heading">Let's talk about everything!</h2>
