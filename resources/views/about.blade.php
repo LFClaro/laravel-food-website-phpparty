@@ -50,7 +50,7 @@
                 <!--ABOUT CEZMI-->
 
                 <div class="col">
-                    <img src="{{asset('/img/profiles/undraw_online_groceries_teal.svg')}}" width="140" height="140" alt="Cezmi's Profile pic"/>
+                    <img src="{{asset('/img/profiles/placeholder-profile.svg')}}" width="180" height="180" alt="Cezmi's Profile pic"/>
                     <h2 class="text-warning">Cezmi Aktepe</h2>
                     <p>Writing codes, designing web pages and creating projects was my dream job since I graduated from high school. I love dealing with computers and tech.</p>
                     <p>I found a chance to reach my dream job in Canada. Here I am ...</p>

@@ -108,7 +108,7 @@ $user = Auth::user();
                     <div class="col-md-5 order-md-1">
                         <!--                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>-->
                         <div class ="featurette-image img-fluid mx-auto">
-                            <img width="450" height="450" src="{{asset('/img/SVG/food_pic.svg')}}" alt="A map of an unmarked neighbourhood" />
+                            <img width="450" height="450" src="{{asset('/img/SVG/food_pic.svg')}}" alt="Picture of recipe / food" />
                         </div>
                     </div>
                 </div>
