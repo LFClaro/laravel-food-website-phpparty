@@ -1,5 +1,15 @@
 <?php
-
+use Illuminate\Support\Facades\Session;
+//$user = Auth::User();
+//Session::put('user', $user);
+//session_start();
+//$_SESSION["user"] = $user;
+$_SESSION["test"] = "test";
+//echo $_SESSION["user"];
+//echo $_SESSION["test"];
+//$_ENV["Tim"] = "Tim";
+//echo $_ENV["Tim"];
+//echo "burns";
 ?>
 @extends('layouts.main')
 
@@ -84,9 +94,11 @@
 {{--                    <?php $user = Auth::user()--}}
 {{--//                    echo var_dump($user)--}}
 
-
+{{--                    Session::put('user', $user);--}}
+{{--                    $user2=Session::get('user');--}}
 {{--                    ?>--}}
-{{--                    {{var_dump($user->email)}}--}}
+{{--                    {{var_dump($user2)}}--}}
+
                 </h2>
                 <p>Here you can have access to recipes from all over the world. We have a database with numerous recipes from more than 80 countries for your taste.</p>
                 <p><a class="btn btn-secondary" href="/recipes">View Recipes &raquo;</a></p>

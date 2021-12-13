@@ -26,7 +26,14 @@ Route::get('/', function () { return view('home');});
 
 Route::get('/home', function () { return view('home'); });
 
-Route::get('/sitemap', function () { return view('sitemap'); });
+//Route::get('/sitemap', function () { return view('sitemap'); });
+
+Route::get('/sitemap', function(){
+    //Mail::to('tim.marshall.burns95@gmail.com')->send(new WelcomeMail()); // get user email here
+
+    $user=\Illuminate\Support\Facades\Auth::user();
+    return view('sitemap',compact('user'));
+});
 
 Route::get('/about', function () { return view('about'); });
 
@@ -51,6 +58,8 @@ Route::resource('/users', UsersController::class);
 // route for emails
 Route::get('/email', function(){
     //Mail::to('tim.marshall.burns95@gmail.com')->send(new WelcomeMail()); // get user email here
+
+    $user=\Illuminate\Support\Facades\Auth::user();
     return new WelcomeMail();
 });
 

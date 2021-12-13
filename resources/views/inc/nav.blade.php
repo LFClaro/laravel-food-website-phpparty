@@ -1,3 +1,13 @@
+<?php
+
+session_start();
+$user = Auth::User();
+$_SESSION["user"] = $user;
+echo $_SESSION["user"];
+
+
+
+?>
 @section('nav')
     <div id="navbarSupportedContent" class="collapse navbar-collapse align-content-center">
         <ul class="navbar-nav ml-auto text-uppercase font-weight-bold">
