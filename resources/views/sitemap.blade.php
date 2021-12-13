@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
-@section(('header'))
-    @parent
+@section(('title'))
+    Site Map
 @endsection
 @section('content')
 
@@ -15,7 +15,7 @@
 
         <!-- Three columns of text below the carousel -->
         <div class="row">
-            <h1 class="featurette-heading text-light">PHParty Site Map {{var_dump($users)}} {{var_dump($tester)}}</h1>
+            <h1 class="featurette-heading text-light">PHParty Site Map</h1>
 
                 <p><a href="/home" class="nav-link text-uppercase font-weight-bold text-light">Home</a></p>
                 <p><a href="/recipes" class="nav-link text-uppercase font-weight-bold text-light">Recipes</a> </p>
@@ -28,7 +28,4 @@
                 <p><a href="/faq" class="nav-link text-uppercase font-weight-bold text-light">FAQ's</a></p>
         </div>
 
-@endsection
-@section('footer')
-    @parent
 @endsection
