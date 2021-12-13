@@ -1,12 +1,3 @@
-<?php
-
-
-
-
-
-
-?>
-
 @extends('layouts.main')
 
 @section( 'title')

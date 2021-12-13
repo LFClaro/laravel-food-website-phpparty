@@ -1,16 +1,3 @@
-<?php
-use Illuminate\Support\Facades\Session;
-//$user = Auth::User();
-//Session::put('user', $user);
-//session_start();
-//$_SESSION["user"] = $user;
-$_SESSION["test"] = "test";
-//echo $_SESSION["user"];
-//echo $_SESSION["test"];
-//$_ENV["Tim"] = "Tim";
-//echo $_ENV["Tim"];
-//echo "burns";
-?>
 @extends('layouts.main')
 
 @section( 'title')

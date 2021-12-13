@@ -1,7 +1,3 @@
-<?php
-$users=$user;
-$tester=\Illuminate\Support\Facades\Auth::user();
-?>
 @extends('layouts.main')
 
 @section(('header'))
