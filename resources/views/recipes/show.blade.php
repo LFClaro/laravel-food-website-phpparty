@@ -1,3 +1,9 @@
+<?php
+use Illuminate\Support\Facades\Auth;
+$user = Auth::user();
+
+?>
+
 @extends('layouts.main')
 
 @section( 'title')
@@ -24,6 +30,8 @@
         @endforeach
         <br /><br />
 
+        @if (Route::has('login'))
+            @auth
         <div>
             <h4>Add Review </h4>
             <form action="{{ url('recipereview') }}" method="post">
@@ -49,4 +57,6 @@
                 <a href="{{ url('recipereview') }}" id="btn_back" class="btn btn-success float-left">Back</a>
             </form>
         </div>
+    @endauth
+    @endif
 @endsection

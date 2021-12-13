@@ -38,7 +38,8 @@ class RecipeReviewController extends Controller
     public function store(Request $request)
     {
         RecipeReview::create($request->all());
-        return redirect('recipes');
+        return redirect('recipes/'.$request->recipe_id);
+        // redirects to the proper view now by Tim -  TODO DO NOT TOUCH
     }
 
     /**
