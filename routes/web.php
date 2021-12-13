@@ -7,6 +7,7 @@ use App\Http\Controllers\RecipeController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\UsersController;
+use App\Http\Controllers\FAQController;
 use App\Mail\WelcomeMail;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Mail;
@@ -26,7 +27,14 @@ Route::get('/', function () { return view('home');});
 
 Route::get('/home', function () { return view('home'); });
 
-Route::get('/sitemap', function () { return view('sitemap'); });
+//Route::get('/sitemap', function () { return view('sitemap'); });
+
+Route::get('/sitemap', function(){
+    //Mail::to('tim.marshall.burns95@gmail.com')->send(new WelcomeMail()); // get user email here
+
+    $user=\Illuminate\Support\Facades\Auth::user();
+    return view('sitemap',compact('user'));
+});
 
 Route::get('/about', function () { return view('about'); });
 
@@ -46,11 +54,14 @@ Route::resource('/recipereview', RecipeReviewController::class);
 Route::resource('/review',RestaurantReviewController::class);
 Route::resource('/contact',ContactController::class);
 Route::resource('/users', UsersController::class);
+Route::resource("/faqs",FAQController::class);
 
 
 // route for emails
 Route::get('/email', function(){
     //Mail::to('tim.marshall.burns95@gmail.com')->send(new WelcomeMail()); // get user email here
+
+    $user=\Illuminate\Support\Facades\Auth::user();
     return new WelcomeMail();
 });
 
