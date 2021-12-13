@@ -11,10 +11,11 @@
                 <li class="list-inline-item"><a href="/about">About</a></li>
                 <li class="list-inline-item"><a href="/contact/create">Contact</a></li>
                 <li class="list-inline-item"><a href="/privacy">Privacy Policy</a></li>
-                <li><a href="/faq" class="list-inline-item">FAQ's</a></li>
+                {{--route to faqcontroll index method--}}
+                <li><a href="/faqs/index" class="list-inline-item">FAQ's</a></li>
             </ul>
             <p class="copyright">Humber College &copy; 2021</p>
-        </footer>
+    </footer>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
