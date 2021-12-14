@@ -47,7 +47,9 @@
                     <div class="carousel-caption text-end">
                         <h1>Travel without leaving your kitchen.</h1>
                         <p>Amazing recipes from all over the world in the palm of your hand.</p>
-                        <p><a class="btn btn-lg btn-primary text-light" href="#">Sign up today</a></p>
+                        @if (Route::has('register'))
+                            <p><a class="btn btn-lg btn-primary text-light" href="{{ route('register') }}">Sign up today</a></p>
+                        @endif
                     </div>
                 </div>
             </div>
