@@ -49,7 +49,6 @@
             <h2 class="text-danger">Access Rejected</h2>
         @endauth
     @endif
-
 @endsection
 @section('footer')
     @parent

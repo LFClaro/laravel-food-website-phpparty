@@ -8,6 +8,8 @@
     @parent
 @endsection
 @section('content')
+    @if(Route::has('login'))
+        @auth
     <div class="container align-items-center justify-content-center">
         <h1 class="text-center">List of Users</h1>
         <table class="table table-striped table-light text-dark table-hover">
@@ -50,6 +52,10 @@
         </table>
         <br />
     </div>
+        @elseif (Route::has('users'))
+            <h2 class="text-danger">Access Rejected</h2>
+        @endauth
+    @endif
 @endsection
 @section('footer')
     @parent
