@@ -103,7 +103,7 @@ $apiKey = 'e91b43eb22msh27afb7fecb1ca62p1ece39jsn3bd0cec1b4d7';
             @endif
 
             @elseif(Route::has('register') )
-                <h3 class="text-center">To add a recipe, please loggin</h3>
+                <h3 class="text-center">To add a recipe, please login</h3>
                 @foreach($recipes as $r)
                     <div class="row featurette align-items-center">
                         <div class="col-md-7 mx-auto order-md-2">
