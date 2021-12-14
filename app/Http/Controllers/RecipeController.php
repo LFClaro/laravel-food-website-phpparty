@@ -39,7 +39,31 @@ class RecipeController extends Controller
      */
     public function store(Request $request)
     {
-        Recipe::create($request->all());
+        /*
+         * $validated = $request->validate([
+            'name' => 'required|min:2',
+            'email' => 'required|email',
+            'subject' => 'required',
+            'message' => 'required',
+        ]);
+        //$contact->update($request->all());
+        $contact->update($validated);
+         */
+        $validated = $request->validate([
+            'name' => 'required|min:2',
+            'description' => 'required',
+            'ingredients' => 'required',
+            'steps' => 'required',
+            'website' => 'required|url',
+            'comments' => 'required',
+            'calories' => 'required',
+            'serving' => 'required',
+            'rating' => 'required',
+            'country_id' => 'required',
+        ]);
+
+        //Recipe::create($request->all());
+        Recipe::create($validated);
         return redirect('recipes');
     }
 
@@ -76,7 +100,21 @@ class RecipeController extends Controller
      */
     public function update(Request $request, Recipe $recipe)
     {
-        $recipe->update($request->all());
+        $validated = $request->validate([
+            'name' => 'required|min:2',
+            'description' => 'required',
+            'ingredients' => 'required',
+            'steps' => 'required',
+            'website' => 'required|url',
+            'comments' => 'required',
+            'calories' => 'required',
+            'serving' => 'required',
+            'rating' => 'required',
+            'country_id' => 'required',
+        ]);
+
+        //$recipe->update($request->all());
+        $recipe->update($validated);
         return redirect('recipes');
     }
 

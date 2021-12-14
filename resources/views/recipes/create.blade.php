@@ -7,6 +7,15 @@
 @section('content')
     <div class="container align-items-center justify-content-center">
         <h1>Add Recipe </h1>
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li class="lead text-danger">Error: {{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
         <form action="{{ url('recipes') }}" method="post">
             @csrf
             <div class="form-group">

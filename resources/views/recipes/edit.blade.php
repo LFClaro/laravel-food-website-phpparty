@@ -1,3 +1,8 @@
+<?php
+use Illuminate\Support\Facades\Auth;
+$user = Auth::user();
+
+?>
 @extends('layouts.main')
 
 @section( 'title')
@@ -6,7 +11,19 @@
 
 @section('content')
     <div class="container align-items-center justify-content-center">
+        @if (Route::has('login'))
+            @auth
+                @if($user->role == "admin")
         <h1>Edit Recipe - {{ $recipes->name }}</h1>
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li class="lead text-danger">Error: {{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
         <form action="{{ url('recipes', $recipes->id) }}" method="post">
             @csrf
             @method('PUT')
@@ -78,5 +95,8 @@
                 </div>
             </div>
         </form>
+                @endif
+            @endauth
+        @endif
     </div>
 @endsection
