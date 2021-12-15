@@ -116,7 +116,7 @@ $apiKey = 'e91b43eb22msh27afb7fecb1ca62p1ece39jsn3bd0cec1b4d7';
                             <p><a href="{{ $r->website }}"
                                   class="link-info text-decoration-none text-highlighted lead">{{ $r->website }}</a></p>
                             <p class="lead">The number of calories: {{ $r->calories }}</p>
-                            <p class="lead">The umber of servings: {{ $r->servings }}</p>
+                            <p class="lead">The number of servings: {{ $r->servings }}</p>
                             <p class="lead">Rating: {{ $r->rating }}</p>
                             <p class="lead">Country of origin: {{ $r->country->name}}</p>
                         </div>
