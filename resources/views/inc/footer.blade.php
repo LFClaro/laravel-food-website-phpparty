@@ -12,7 +12,7 @@
                 <li class="list-inline-item"><a href="/contact/create">Contact</a></li>
                 <li class="list-inline-item"><a href="/privacy">Privacy Policy</a></li>
                 {{--route to faqcontroll index method--}}
-                <li><a href="/faqs/index" class="list-inline-item">FAQ's</a></li>
+                <li><a href="/faqs" class="list-inline-item">FAQ's</a></li>
             </ul>
             <p class="copyright">Humber College &copy; 2021</p>
     </footer>

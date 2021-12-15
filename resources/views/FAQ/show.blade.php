@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section( 'title')
-    {{ $faqs->question }}
+    Question
 @endsection
 
 @section('content')
