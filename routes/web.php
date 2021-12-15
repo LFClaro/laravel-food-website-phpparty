@@ -40,7 +40,7 @@ Route::get('/about', function () { return view('about'); });
 
 Route::get('/privacy', function () { return view('privacy'); });
 
-Route::get('/faq', function () { return view('faq'); });
+Route::get('/faqs', function () { return view('faqs'); });
 
 Route::get('/restaurants/map', function () { return view('restaurants.map'); });
 
