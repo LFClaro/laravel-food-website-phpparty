@@ -25,14 +25,15 @@ class FAQController extends Controller
     public function store(Request $request)
     {
         FAQ::create($request->all());
-        return redirect('home');
+        $faqs = FAQ::all();
+        return redirect('faqs.index',compact('faqs'));
     }
 
     //TODO: dont know where to put the access point
     public function show(FAQ $fAQ)
     {
         $faqs = FAQ::all();
-        return view('FAQs.show',compact('faqs'));
+        return view('FAQ.show',compact('faqs'));
     }
 
     public function edit(FAQ $fAQ)
