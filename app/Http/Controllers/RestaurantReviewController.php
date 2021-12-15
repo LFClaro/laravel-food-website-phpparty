@@ -21,11 +21,8 @@ class RestaurantReviewController extends Controller
 
     public function store(Request $request)
     {
-//        request()->validate(RestaurantReview::$rules);
-
-        $restaurantReview = RestaurantReview::create($request->all());
-
-        return redirect('restaurantreview.index');
+        RestaurantReview::create($request->all());
+        return redirect('restaurants/'.$request->restaurant_id);
     }
 
     public function show($id)
