@@ -2,6 +2,8 @@
 
 ## About PHParty Project
 
+A Food lovers website where users can look up restaurants and recipes in the Greater Toronto Area.
+
 ### FEATURES
 
 ### Luiz 
