@@ -9,24 +9,24 @@
 
 ## About PHParty Project
 
-##Features
+### Features
 
-##Luiz 
+### Luiz 
 - Restaurants CRUD
 - Google map API 
 - Spoontacular API (getting images for recipes dynamically) 
 
-##Tim 
+### Tim 
 - Recipes CRUD
 - Contct Form CRUD an Email
 - Open Weather Api
 
-##Cezmi
+### Cezmi
 - Recipe Review CRUD
 - User and Admin login
 - User Management CRUD
 
-##Alex 
+### Alex 
 - Restaurants Review CRUD
 - Search CRUD
 - FAQ CRUD
