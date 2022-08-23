@@ -11,6 +11,11 @@
 
 ##Features
 
+##Luiz 
+- Restaurants CRUD
+- Google map API 
+- Spoontacular API (getting images for recipes dynamically) 
+
 ##Tim 
 - Recipes CRUD
 - Contct Form CRUD an Email
@@ -25,8 +30,3 @@
 - Restaurants Review CRUD
 - Search CRUD
 - FAQ CRUD
-
-##Luiz 
-- Restaurants CRUD
-- Google map API 
-- Spoontacular API (getting images for recipes dynamically) 
